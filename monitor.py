@@ -22,10 +22,12 @@ TIMEOUT_SECONDS = 20
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
 
+ENV_NE_IDS = "NE_IDS"
 ENV_GMAIL_ADDRESS = "GMAIL_ADDRESS"
 ENV_GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"
 ENV_TEAMS_CHANNEL_EMAIL = "TEAMS_CHANNEL_EMAIL"
 FROM_ALIAS_EMAIL = "gianniskal@duck.com"
+ENV_DEBUG_LOG = "DEBUG_LOG"
 
 
 def _log(msg: str) -> None:
@@ -51,6 +53,14 @@ def _build_session() -> requests.Session:
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     return session
+
+
+def _get_ne_ids() -> List[str]:
+    raw = os.environ.get(ENV_NE_IDS, "").strip()
+    if not raw:
+        return NE_IDS
+    parts = [p.strip() for p in raw.split(",")]
+    return [p for p in parts if p]
 
 
 def _safe_get_json(session: requests.Session, url: str) -> List[dict]:
@@ -152,20 +162,40 @@ def _send_email(subject: str, body: str) -> bool:
         return True
     except Exception as exc:
         _log(f"Email send failed: {exc}")
-        return False
+    return False
+
+
+def _debug_sample(payloads: List[dict]) -> None:
+    if not os.environ.get(ENV_DEBUG_LOG):
+        return
+    if not payloads:
+        _log("DEBUG: no payloads to sample")
+        return
+    first = payloads[0]
+    if isinstance(first, dict):
+        keys = sorted(first.keys())
+        _log(f"DEBUG: first payload keys: {keys}")
+        items = first.get("lektikoGenikonDiakoponList")
+        if isinstance(items, list):
+            _log(f"DEBUG: lektikoGenikonDiakoponList length: {len(items)}")
+    else:
+        _log(f"DEBUG: first payload type: {type(first)}")
 
 
 def main() -> int:
     try:
         session = _build_session()
         all_payloads: List[dict] = []
-        for ne_id in NE_IDS:
+        for ne_id in _get_ne_ids():
             url = API_BASE.format(ne_id=ne_id)
             payload = _safe_get_json(session, url)
             all_payloads.extend(payload)
 
+        _log(f"Fetched payloads: {len(all_payloads)}")
+        _debug_sample(all_payloads)
         current_areas = _extract_areas(all_payloads)
         previous_areas = _read_state()
+        _log(f"Extracted areas: {len(current_areas)}")
 
         new_areas = current_areas - previous_areas
         restored_areas = previous_areas - current_areas
