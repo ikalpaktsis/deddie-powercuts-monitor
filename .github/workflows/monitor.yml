@@ -34,7 +34,9 @@ jobs:
 
       - name: Run monitor
         env:
-          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          TEAMS_CHANNEL_EMAIL: ${{ secrets.TEAMS_CHANNEL_EMAIL }}
         run: |
           python monitor.py
 

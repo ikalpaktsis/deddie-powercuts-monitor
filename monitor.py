@@ -1,9 +1,10 @@
-import json
+﻿import json
 import os
 import sys
-import time
 from datetime import datetime, timezone
 from typing import Iterable, List, Set
+import smtplib
+from email.message import EmailMessage
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -16,8 +17,15 @@ API_BASE = (
 
 NE_IDS = ["0205"]
 STATE_PATH = os.path.join(os.path.dirname(__file__), "state.json")
-WEBHOOK_ENV = "TEAMS_WEBHOOK"
 TIMEOUT_SECONDS = 20
+
+SMTP_HOST = "smtp.gmail.com"
+SMTP_PORT = 587
+
+ENV_GMAIL_ADDRESS = "GMAIL_ADDRESS"
+ENV_GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"
+ENV_TEAMS_CHANNEL_EMAIL = "TEAMS_CHANNEL_EMAIL"
+FROM_ALIAS_EMAIL = "gianniskal@duck.com"
 
 
 def _log(msg: str) -> None:
@@ -105,35 +113,50 @@ def _write_state(areas: Set[str]) -> None:
 def _build_message(new_areas: Set[str], restored_areas: Set[str]) -> str:
     lines: List[str] = []
     if new_areas:
-        lines.append("? ???? ????????")
+        lines.append("⚡ ΝΕΕΣ διακοπές")
         for area in sorted(new_areas):
-            lines.append(f"? {area}")
+            lines.append(f"• {area}")
     if restored_areas:
         if lines:
             lines.append("")
-        lines.append("? ???????????????")
+        lines.append("✅ Αποκαταστάθηκαν")
         for area in sorted(restored_areas):
-            lines.append(f"? {area}")
+            lines.append(f"• {area}")
     return "\n".join(lines)
 
 
-def _send_teams(webhook: str, message: str, session: requests.Session) -> bool:
-    payload = {"text": message}
-    _log("Sending Teams notification")
-    resp = session.post(webhook, json=payload, timeout=TIMEOUT_SECONDS)
-    if resp.status_code not in (200, 201, 202):
-        _log(f"Teams webhook returned {resp.status_code}: {resp.text[:200]}")
+def _send_email(subject: str, body: str) -> bool:
+    sender = os.environ.get(ENV_GMAIL_ADDRESS, "").strip()
+    password = os.environ.get(ENV_GMAIL_APP_PASSWORD, "").strip()
+    recipient = os.environ.get(ENV_TEAMS_CHANNEL_EMAIL, "").strip()
+
+    if not sender or not password or not recipient:
+        _log("Missing email env vars; exiting without error")
         return False
-    return True
+
+    msg = EmailMessage()
+    msg["From"] = FROM_ALIAS_EMAIL or sender
+    msg["Reply-To"] = FROM_ALIAS_EMAIL or sender
+    msg["To"] = recipient
+    msg["Subject"] = subject
+    msg.set_content(body)
+
+    try:
+        _log("Sending email notification")
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=TIMEOUT_SECONDS) as server:
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(sender, password)
+            server.send_message(msg)
+        return True
+    except Exception as exc:
+        _log(f"Email send failed: {exc}")
+        return False
 
 
 def main() -> int:
     try:
-        webhook = os.environ.get(WEBHOOK_ENV, "").strip()
-        if not webhook:
-            _log("Missing TEAMS_WEBHOOK env var; exiting without error")
-            return 0
-
         session = _build_session()
         all_payloads: List[dict] = []
         for ne_id in NE_IDS:
@@ -149,7 +172,8 @@ def main() -> int:
 
         if new_areas or restored_areas:
             message = _build_message(new_areas, restored_areas)
-            _send_teams(webhook, message, session)
+            subject = "DEDDIE Power Outage Updates"
+            _send_email(subject, message)
         else:
             _log("No changes detected; no notification sent")
 
