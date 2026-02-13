@@ -44,6 +44,7 @@ AREA_TEXT_KEYS = (
     "name",
     "perioxi",
     "perioxh",
+    "peri",
     "description",
     "title",
     "ota",
