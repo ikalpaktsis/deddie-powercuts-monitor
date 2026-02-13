@@ -1,5 +1,36 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-13T11:28:40.849326+00:00"
+  "incidents": {
+    "0502:24005": {
+      "incident_id": 24005,
+      "ne_id": "0502",
+      "nomos": "ΝΕ 0502",
+      "areas": [
+        "Λαρισαίων"
+      ],
+      "start_date": 1770982080000,
+      "end_date": 1770989280000,
+      "end_date_announced": 1770989400000,
+      "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "1:24006": {
+      "incident_id": 24006,
+      "ne_id": "1",
+      "nomos": "ΝΕ 1",
+      "areas": [
+        "Σκιάθου"
+      ],
+      "start_date": 1770982860000,
+      "end_date": 1770990060000,
+      "end_date_announced": 1770991200000,
+      "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-13T11:54:31.241966+00:00"
 }
