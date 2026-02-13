@@ -4,7 +4,7 @@
     "0502:24005": {
       "incident_id": 24005,
       "ne_id": "0502",
-      "nomos": "ΝΕ 0502",
+      "nomos": "Λάρισας",
       "areas": [
         "Λαρισαίων"
       ],
@@ -19,7 +19,7 @@
     "0703:24007": {
       "incident_id": 24007,
       "ne_id": "0703",
-      "nomos": "ΝΕ 0703",
+      "nomos": "Ηλείας",
       "areas": [
         "Ανδραβίδας",
         "Βουπρασίας",
@@ -36,7 +36,7 @@
     "1:24006": {
       "incident_id": 24006,
       "ne_id": "1",
-      "nomos": "ΝΕ 1",
+      "nomos": "Μαγνησίας",
       "areas": [
         "Σκιάθου"
       ],
@@ -47,7 +47,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "6:24008": {
+      "incident_id": 24008,
+      "ne_id": "6",
+      "nomos": "Δωδεκανήσου",
+      "areas": [
+        "Κω"
+      ],
+      "start_date": 1770986280000,
+      "end_date": 1770989880000,
+      "end_date_announced": 1770991200000,
+      "creator": "S.Mavrikakis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T12:38:05.221343+00:00"
+  "updated_at": "2026-02-13T13:07:00.412214+00:00"
 }
