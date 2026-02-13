@@ -7,6 +7,8 @@ Monitors the official DEDDIE public REST API for power outages and sends notific
 - Robust HTTP retries and timeouts
 - Idempotent state tracking via `state.json`
 - No spam: only notifies on changes
+- Groups outages by Nomos (prefecture) when mapping is provided
+- Includes estimated restoration time in notifications
 
 ## Setup
 1. Enable 2-Step Verification on the Gmail account that will send the alerts.
@@ -18,14 +20,29 @@ Monitors the official DEDDIE public REST API for power outages and sends notific
 
 ## Configuration
 - Region IDs are set in `monitor.py` via `NE_IDS` (default: `['0205']`).
+- The workflow overrides this via `NE_IDS` env with all IDs.
+
+## Nomos Mapping
+To show the Nomos name in emails, fill `ne_id_map.json` with a map from NE ID to Nomos name.
+
+Example (placeholder):
+```json
+{
+  "0101": "Νομός Παράδειγμα"
+}
+```
+
+If a mapping is missing, the email will show `ΝΕ <id>` as the fallback label.
 
 ## How It Works
 Every 15 minutes, the workflow:
 1. Calls the DEDDIE API for each configured region ID
 2. Extracts affected area names
-3. Compares with previous run (`state.json`)
-4. Sends email alerts only for **new** or **restored** areas
-5. Commits updated `state.json` back to the repo
+3. Groups by Nomos
+4. Tracks restoration ETA (`end_date_announced`/`end_date`)
+5. Compares with previous run (`state.json`)
+6. Sends email alerts only for **new**, **restored**, or **ETA-changed** areas
+7. Commits updated `state.json` back to the repo
 
 ## GitHub Actions
 Workflow file: `.github/workflows/monitor.yml`
