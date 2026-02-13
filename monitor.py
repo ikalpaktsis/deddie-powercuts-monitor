@@ -81,7 +81,6 @@ CAUSE_LABELS = {
 
 TABLE_COLUMNS: List[Tuple[str, str]] = [
     ("nomos", "Νομός"),
-    ("ne_id", "NE_ID"),
     ("areas", "Επηρεαζόμενες περιοχές"),
     ("start", "Έναρξη βλάβης"),
     ("eta_restore", "Εκτιμώμενη αποκατάσταση"),
@@ -90,6 +89,7 @@ TABLE_COLUMNS: List[Tuple[str, str]] = [
     ("created_by", "Created By"),
     ("type", "Type"),
     ("status", "Status"),
+    ("ne_id", "NE_ID"),
 ]
 
 
@@ -264,9 +264,9 @@ def _resolve_nomos(outage: dict, ne_id: str, ne_map: Dict[str, str]) -> str:
 def _format_nomos_label(nomos: str) -> str:
     text = _normalize_text(nomos)
     lowered = text.lower()
-    if lowered.startswith("νομός ") or lowered.startswith("νε "):
-        return text
-    return f"Νομός {text}"
+    if lowered.startswith("νομός "):
+        return text[6:].strip()
+    return text
 
 
 def _incident_type_label(cause: str, is_scheduled: bool) -> str:
@@ -418,13 +418,13 @@ def _build_change_payloads(
 
     if new_incidents:
         rows = [_incident_to_row(i) for i in sorted(new_incidents, key=_incident_sort_key)]
-        text_sections.append(_build_rows_text("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ", rows))
-        html_sections.append(_build_rows_table_html("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ", rows))
+        text_sections.append(_build_rows_text("ΝΕΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
+        html_sections.append(_build_rows_table_html("ΝΕΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
 
     if updated_incidents:
         rows = [_incident_to_row(i) for i in sorted(updated_incidents, key=_incident_sort_key)]
-        text_sections.append(_build_rows_text("ΕΝΗΜΕΡΩΣΕΙΣ ΔΙΑΚΟΠΩΝ", rows))
-        html_sections.append(_build_rows_table_html("ΕΝΗΜΕΡΩΣΕΙΣ ΔΙΑΚΟΠΩΝ", rows))
+        text_sections.append(_build_rows_text("ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
+        html_sections.append(_build_rows_table_html("ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
 
     if restored_incidents:
         rows = [
