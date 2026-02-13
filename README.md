@@ -93,3 +93,25 @@ Manual run is also supported from the GitHub Actions UI.
 Manual run inputs:
 - `force_notify` to send a test notification even if no changes
 - `debug_log` to enable extra debug logging
+
+Quick links:
+- Run now (manual): `https://github.com/ikalpaktsis/deddie-powercuts-monitor/actions/workflows/monitor.yml`
+
+## One-Click Run-Now Link (Relay)
+You can trigger the workflow from a single link using `repository_dispatch`.
+
+1. Deploy `relay/cloudflare-worker.js` to Cloudflare Workers.
+2. Set Worker secrets/vars:
+   - `GH_OWNER=ikalpaktsis`
+   - `GH_REPO=deddie-powercuts-monitor`
+   - `GH_TOKEN=<GitHub PAT with repo access>`
+   - `RUN_NOW_KEY=<random-long-secret>`
+3. Use this link:
+   - `https://<your-worker-domain>/run-now?key=<RUN_NOW_KEY>`
+
+Optional query params:
+- `force_notify=true`
+- `debug_log=true`
+
+Security note:
+- Keep `RUN_NOW_KEY` private. Whoever has it can trigger your workflow.
