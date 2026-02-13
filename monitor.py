@@ -387,6 +387,47 @@ def _write_state(current_map: Dict[str, str]) -> None:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
+def _remap_legacy_previous_keys(
+    previous_map: Dict[str, str], current_map: Dict[str, str]
+) -> Dict[str, str]:
+    # Backward compatibility: older state entries were stored as area-only keys
+    # (without "Nomos::Area"). Try to map them to current keys by area name.
+    area_to_current_keys: Dict[str, List[str]] = defaultdict(list)
+    for key in current_map:
+        nomos, area = _decode_key(key)
+        if nomos and area:
+            area_to_current_keys[area].append(key)
+
+    remapped: Dict[str, str] = {}
+    legacy_count = 0
+    mapped_count = 0
+    dropped_count = 0
+
+    for key, eta in previous_map.items():
+        if "::" in key:
+            remapped[key] = eta
+            continue
+
+        legacy_count += 1
+        matches = area_to_current_keys.get(key, [])
+        if matches:
+            mapped_count += 1
+            for match_key in matches:
+                if match_key not in remapped or (not remapped[match_key] and eta):
+                    remapped[match_key] = eta
+        else:
+            # Drop unmatched legacy keys to avoid false "restored" spam.
+            dropped_count += 1
+
+    if legacy_count:
+        _log(
+            "State migration: "
+            f"legacy={legacy_count} mapped={mapped_count} dropped={dropped_count}"
+        )
+
+    return remapped
+
+
 def _send_email(subject: str, body: str) -> bool:
     sender = os.environ.get(ENV_GMAIL_ADDRESS, "").strip()
     password = os.environ.get(ENV_GMAIL_APP_PASSWORD, "").strip()
@@ -478,6 +519,7 @@ def main() -> int:
                         current_map[key] = eta_raw
 
         previous_map = _read_state()
+        previous_map = _remap_legacy_previous_keys(previous_map, current_map)
         _log(
             f"Extracted areas: {len(current_map)} across "
             f"{len(_group_by_nomos(set(current_map.keys())))} nomoi"
