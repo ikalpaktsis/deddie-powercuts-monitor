@@ -1,4 +1,5 @@
-﻿import json
+﻿import html
+import json
 import os
 import smtplib
 import sys
@@ -78,6 +79,19 @@ CAUSE_LABELS = {
     "SCHEDULED": "Scheduled Outage",
 }
 
+TABLE_COLUMNS: List[Tuple[str, str]] = [
+    ("nomos", "Νομός"),
+    ("ne_id", "NE_ID"),
+    ("areas", "Επηρεαζόμενες περιοχές"),
+    ("start", "Έναρξη βλάβης"),
+    ("eta_restore", "Εκτιμώμενη αποκατάσταση"),
+    ("announced_restore", "Ανακοινωμένη αποκατάσταση"),
+    ("incident_id", "Incident ID"),
+    ("created_by", "Created By"),
+    ("type", "Type"),
+    ("status", "Status"),
+]
+
 
 def _log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).isoformat()}] {msg}")
@@ -137,7 +151,7 @@ def _build_session() -> requests.Session:
     session = requests.Session()
     session.headers.update(
         {
-            "User-Agent": "deddie-powercuts-monitor/2.0",
+            "User-Agent": "deddie-powercuts-monitor/2.1",
             "Accept": "application/json",
         }
     )
@@ -221,7 +235,8 @@ def _load_ne_id_map() -> Dict[str, str]:
     if not os.path.exists(NE_MAP_PATH):
         return {}
     try:
-        with open(NE_MAP_PATH, "r", encoding="utf-8") as f:
+        # Accept optional UTF-8 BOM if edited from Windows tools.
+        with open(NE_MAP_PATH, "r", encoding="utf-8-sig") as f:
             data = json.load(f)
         if not isinstance(data, dict):
             _log("ne_id_map.json must be a JSON object")
@@ -246,11 +261,12 @@ def _resolve_nomos(outage: dict, ne_id: str, ne_map: Dict[str, str]) -> str:
     return f"ΝΕ {ne_id}" if ne_id else "Χωρίς νομό"
 
 
-def _nomos_tag_name(nomos: str) -> str:
-    text = nomos.strip().upper()
-    if text.endswith("Σ"):
-        return text[:-1]
-    return text
+def _format_nomos_label(nomos: str) -> str:
+    text = _normalize_text(nomos)
+    lowered = text.lower()
+    if lowered.startswith("νομός ") or lowered.startswith("νε "):
+        return text
+    return f"Νομός {text}"
 
 
 def _incident_type_label(cause: str, is_scheduled: bool) -> str:
@@ -296,11 +312,7 @@ def _incident_sort_key(incident: Dict[str, object]) -> Tuple[str, int]:
     return ne_id, inc_id if inc_id is not None else 0
 
 
-def _build_incident_record(
-    outage: dict,
-    ne_id: str,
-    ne_map: Dict[str, str],
-) -> Optional[Dict[str, object]]:
+def _build_incident_record(outage: dict, ne_id: str, ne_map: Dict[str, str]) -> Optional[Dict[str, object]]:
     incident_id = _to_int(outage.get("id"))
     if incident_id is None:
         return None
@@ -324,10 +336,7 @@ def _build_incident_record(
     }
 
 
-def _merge_incident(
-    current: Dict[str, Dict[str, object]],
-    incident: Dict[str, object],
-) -> None:
+def _merge_incident(current: Dict[str, Dict[str, object]], incident: Dict[str, object]) -> None:
     key = _incident_key(incident)
     existing = current.get(key)
     if not existing:
@@ -340,64 +349,114 @@ def _merge_incident(
         current[key] = incident
 
 
-def _build_incident_block(
-    incident: Dict[str, object],
-    title: str,
-    status_override: Optional[str] = None,
-) -> str:
+def _incident_to_row(incident: Dict[str, object], status_override: Optional[str] = None) -> Dict[str, str]:
     areas = incident.get("areas", [])
     area_text = ", ".join(areas) if isinstance(areas, list) and areas else "Unknown"
+    row = {
+        "nomos": _format_nomos_label(str(incident.get("nomos", "Χωρίς νομό"))),
+        "ne_id": str(incident.get("ne_id", "")),
+        "areas": area_text,
+        "start": _format_epoch_ms(incident.get("start_date")),
+        "eta_restore": _format_epoch_ms(incident.get("end_date")),
+        "announced_restore": _format_epoch_ms(incident.get("end_date_announced")),
+        "incident_id": str(incident.get("incident_id", "Unknown")),
+        "created_by": str(incident.get("creator", "Unknown")),
+        "type": _incident_type_label(str(incident.get("cause", "")), bool(incident.get("is_scheduled", False))),
+        "status": status_override or _incident_status_label(bool(incident.get("is_active", True))),
+    }
+    return row
 
-    lines = [
-        f"[{_nomos_tag_name(str(incident.get('nomos', 'ΧΩΡΙΣ ΝΟΜΟ')))} {incident.get('ne_id', '')}] {title}",
-        "",
-        "Affected Areas:",
-        area_text,
-        "",
-        f"Start: {_format_epoch_ms(incident.get('start_date'))}",
-        f"ETA Restore: {_format_epoch_ms(incident.get('end_date'))}",
-        f"Announced Restore: {_format_epoch_ms(incident.get('end_date_announced'))}",
-        "",
-        f"Incident ID: {incident.get('incident_id', 'Unknown')}",
-        f"Created By: {incident.get('creator', 'Unknown')}",
-        f"Type: {_incident_type_label(str(incident.get('cause', '')), bool(incident.get('is_scheduled', False)))}",
-        f"Status: {status_override or _incident_status_label(bool(incident.get('is_active', True)))}",
+
+def _build_rows_text(title: str, rows: List[Dict[str, str]]) -> str:
+    if not rows:
+        return ""
+    lines: List[str] = [title]
+    for idx, row in enumerate(rows, start=1):
+        lines.extend(
+            [
+                f"{idx}. {row['nomos']} | NE_ID: {row['ne_id']}",
+                f"Επηρεαζόμενες περιοχές: {row['areas']}",
+                f"Έναρξη: {row['start']} | ETA: {row['eta_restore']} | Ανακοινωμένη: {row['announced_restore']}",
+                f"Incident ID: {row['incident_id']} | Created By: {row['created_by']} | Type: {row['type']} | Status: {row['status']}",
+                "",
+            ]
+        )
+    return "\n".join(lines).strip()
+
+
+def _build_rows_table_html(title: str, rows: List[Dict[str, str]]) -> str:
+    if not rows:
+        return ""
+    parts: List[str] = [
+        f"<h3 style='margin:16px 0 8px 0;'>{html.escape(title)}</h3>",
+        "<table style='border-collapse:collapse;width:100%;font-family:Segoe UI,Arial,sans-serif;font-size:13px;'>",
+        "<thead><tr>",
     ]
-    return "\n".join(lines)
+    for _, header in TABLE_COLUMNS:
+        parts.append(
+            f"<th style='border:1px solid #999;padding:6px;text-align:left;background:#f2f2f2;'>{html.escape(header)}</th>"
+        )
+    parts.append("</tr></thead><tbody>")
+    for row in rows:
+        parts.append("<tr>")
+        for key, _ in TABLE_COLUMNS:
+            parts.append(
+                f"<td style='border:1px solid #999;padding:6px;vertical-align:top;'>{html.escape(row.get(key, ''))}</td>"
+            )
+        parts.append("</tr>")
+    parts.append("</tbody></table>")
+    return "".join(parts)
 
 
-def _build_change_message(
+def _build_change_payloads(
     new_incidents: List[Dict[str, object]],
     updated_incidents: List[Dict[str, object]],
     restored_incidents: List[Dict[str, object]],
-) -> str:
-    blocks: List[str] = []
+) -> Tuple[str, str]:
+    text_sections: List[str] = []
+    html_sections: List[str] = []
 
-    for incident in sorted(new_incidents, key=_incident_sort_key):
-        blocks.append(_build_incident_block(incident, "ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ"))
+    if new_incidents:
+        rows = [_incident_to_row(i) for i in sorted(new_incidents, key=_incident_sort_key)]
+        text_sections.append(_build_rows_text("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ", rows))
+        html_sections.append(_build_rows_table_html("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ", rows))
 
-    for incident in sorted(updated_incidents, key=_incident_sort_key):
-        blocks.append(_build_incident_block(incident, "ΕΝΗΜΕΡΩΣΗ ΔΙΑΚΟΠΗΣ"))
+    if updated_incidents:
+        rows = [_incident_to_row(i) for i in sorted(updated_incidents, key=_incident_sort_key)]
+        text_sections.append(_build_rows_text("ΕΝΗΜΕΡΩΣΕΙΣ ΔΙΑΚΟΠΩΝ", rows))
+        html_sections.append(_build_rows_table_html("ΕΝΗΜΕΡΩΣΕΙΣ ΔΙΑΚΟΠΩΝ", rows))
 
-    for incident in sorted(restored_incidents, key=_incident_sort_key):
-        blocks.append(
-            _build_incident_block(
-                incident,
-                "ΑΠΟΚΑΤΑΣΤΑΣΗ",
-                status_override=_incident_status_label(False, resolved=True),
-            )
-        )
+    if restored_incidents:
+        rows = [
+            _incident_to_row(i, status_override=_incident_status_label(False, resolved=True))
+            for i in sorted(restored_incidents, key=_incident_sort_key)
+        ]
+        text_sections.append(_build_rows_text("ΑΠΟΚΑΤΑΣΤΑΣΕΙΣ", rows))
+        html_sections.append(_build_rows_table_html("ΑΠΟΚΑΤΑΣΤΑΣΕΙΣ", rows))
 
-    return "\n\n".join(blocks)
+    text_body = "\n\n".join([s for s in text_sections if s]).strip()
+    html_body = (
+        "<html><body style='font-family:Segoe UI,Arial,sans-serif;'>"
+        + "".join([s for s in html_sections if s])
+        + "</body></html>"
+    )
+    return text_body, html_body
 
 
-def _build_snapshot_message(current_incidents: List[Dict[str, object]]) -> str:
-    blocks: List[str] = []
-    for incident in sorted(current_incidents, key=_incident_sort_key):
-        blocks.append(_build_incident_block(incident, "ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ (TEST)"))
-    if not blocks:
-        return "No active outages (test)."
-    return "\n\n".join(blocks)
+def _build_snapshot_payload(current_incidents: List[Dict[str, object]]) -> Tuple[str, str]:
+    rows = [_incident_to_row(i) for i in sorted(current_incidents, key=_incident_sort_key)]
+    if not rows:
+        text = "No active outages (test)."
+        html_body = "<html><body><p>No active outages (test).</p></body></html>"
+        return text, html_body
+
+    text = _build_rows_text("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ (TEST)", rows)
+    html_body = (
+        "<html><body style='font-family:Segoe UI,Arial,sans-serif;'>"
+        + _build_rows_table_html("ΕΝΕΡΓΕΣ ΔΙΑΚΟΠΕΣ (TEST)", rows)
+        + "</body></html>"
+    )
+    return text, html_body
 
 
 def _read_state() -> Tuple[Dict[str, Dict[str, object]], bool]:
@@ -405,7 +464,7 @@ def _read_state() -> Tuple[Dict[str, Dict[str, object]], bool]:
         return {}, False
 
     try:
-        with open(STATE_PATH, "r", encoding="utf-8") as f:
+        with open(STATE_PATH, "r", encoding="utf-8-sig") as f:
             data = json.load(f)
     except Exception as exc:
         _log(f"Failed to read state.json: {exc}")
@@ -419,7 +478,6 @@ def _read_state() -> Tuple[Dict[str, Dict[str, object]], bool]:
                 normalized[str(key)] = value
         return normalized, False
 
-    # Legacy formats existed under "areas". Treat as migration and avoid false restore spam.
     if "areas" in data:
         return {}, True
 
@@ -436,7 +494,7 @@ def _write_state(current: Dict[str, Dict[str, object]]) -> None:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
-def _send_email(subject: str, body: str) -> bool:
+def _send_email(subject: str, text_body: str, html_body: Optional[str] = None) -> bool:
     sender = os.environ.get(ENV_GMAIL_ADDRESS, "").strip()
     password = os.environ.get(ENV_GMAIL_APP_PASSWORD, "").strip()
     recipient = os.environ.get(ENV_TEAMS_CHANNEL_EMAIL, "").strip()
@@ -450,7 +508,9 @@ def _send_email(subject: str, body: str) -> bool:
     msg["Reply-To"] = FROM_ALIAS_EMAIL or sender
     msg["To"] = recipient
     msg["Subject"] = subject
-    msg.set_content(body)
+    msg.set_content(text_body)
+    if html_body:
+        msg.add_alternative(html_body, subtype="html")
 
     try:
         _log("Sending email notification")
@@ -518,7 +578,7 @@ def main() -> int:
         _log(f"Extracted incidents: {len(current_incidents)}")
 
         previous_incidents, legacy_state_detected = _read_state()
-        if legacy_state_detected and previous_incidents == {} and current_incidents:
+        if legacy_state_detected and not previous_incidents and current_incidents:
             _log("Legacy state detected; suppressing one-time migration notifications")
             previous_incidents = dict(current_incidents)
 
@@ -532,7 +592,8 @@ def main() -> int:
         updated_keys = [
             key
             for key in shared_keys
-            if _incident_signature(current_incidents[key]) != _incident_signature(previous_incidents[key])
+            if _incident_signature(current_incidents[key])
+            != _incident_signature(previous_incidents[key])
         ]
 
         force_notify = _env_true(ENV_FORCE_NOTIFY)
@@ -543,15 +604,15 @@ def main() -> int:
         )
 
         if new_keys or restored_keys or updated_keys:
-            message = _build_change_message(
+            text_body, html_body = _build_change_payloads(
                 [current_incidents[k] for k in new_keys],
                 [current_incidents[k] for k in updated_keys],
                 [previous_incidents[k] for k in restored_keys],
             )
-            _send_email("DEDDIE Power Outage Updates", message)
+            _send_email("DEDDIE Power Outage Updates", text_body, html_body)
         elif force_notify:
-            message = _build_snapshot_message(list(current_incidents.values()))
-            _send_email("DEDDIE Power Outage Updates (Test)", message)
+            text_body, html_body = _build_snapshot_payload(list(current_incidents.values()))
+            _send_email("DEDDIE Power Outage Updates (Test)", text_body, html_body)
         else:
             _log("No changes detected; no notification sent")
 

@@ -36,7 +36,19 @@ Example (placeholder):
 If a mapping is missing, the email will show `ΝΕ <id>` as the fallback label.
 
 ## Alert Format
-Each incident is sent as a detailed block:
+Each incident is sent in a table-friendly format (HTML email + plain-text fallback) with these columns:
+- `Νομός`
+- `NE_ID`
+- `Επηρεαζόμενες περιοχές`
+- `Έναρξη βλάβης`
+- `Εκτιμώμενη αποκατάσταση`
+- `Ανακοινωμένη αποκατάσταση`
+- `Incident ID`
+- `Created By`
+- `Type`
+- `Status`
+
+Plain-text fallback example:
 
 ```text
 [ΗΛΕΙΑ 0703] ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ
