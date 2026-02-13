@@ -1,21 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0502:24005": {
-      "incident_id": 24005,
-      "ne_id": "0502",
-      "nomos": "Λάρισας",
-      "areas": [
-        "Λαρισαίων"
-      ],
-      "start_date": 1770982080000,
-      "end_date": 1770989280000,
-      "end_date_announced": 1770989400000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0703:24007": {
       "incident_id": 24007,
       "ne_id": "0703",
@@ -29,21 +14,6 @@
       "end_date": 1770991200000,
       "end_date_announced": 1770993000000,
       "creator": "M.Kalfountzou",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "1:24006": {
-      "incident_id": 24006,
-      "ne_id": "1",
-      "nomos": "Μαγνησίας",
-      "areas": [
-        "Σκιάθου"
-      ],
-      "start_date": 1770982860000,
-      "end_date": 1770990060000,
-      "end_date_announced": 1770991200000,
-      "creator": "G.Fassas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -64,5 +34,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T13:07:00.412214+00:00"
+  "updated_at": "2026-02-13T13:29:51.214885+00:00"
 }
