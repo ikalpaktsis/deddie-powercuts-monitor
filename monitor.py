@@ -28,6 +28,7 @@ ENV_GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"
 ENV_TEAMS_CHANNEL_EMAIL = "TEAMS_CHANNEL_EMAIL"
 FROM_ALIAS_EMAIL = "iokalpaktsis@gmail.com"
 ENV_DEBUG_LOG = "DEBUG_LOG"
+ENV_FORCE_NOTIFY = "FORCE_NOTIFY"
 
 
 def _log(msg: str) -> None:
@@ -53,6 +54,11 @@ def _build_session() -> requests.Session:
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     return session
+
+
+def _env_true(name: str) -> bool:
+    value = os.environ.get(name, "").strip().lower()
+    return value in {"1", "true", "yes", "y", "on"}
 
 
 def _get_ne_ids() -> List[str]:
@@ -135,6 +141,15 @@ def _build_message(new_areas: Set[str], restored_areas: Set[str]) -> str:
     return "\n".join(lines)
 
 
+def _build_snapshot_message(current_areas: Set[str]) -> str:
+    if current_areas:
+        lines = ["ℹ️ Τρέχουσες διακοπές (test)"]
+        for area in sorted(current_areas):
+            lines.append(f"• {area}")
+        return "\n".join(lines)
+    return "ℹ️ Καμία ενεργή διακοπή (test)"
+
+
 def _send_email(subject: str, body: str) -> bool:
     sender = os.environ.get(ENV_GMAIL_ADDRESS, "").strip()
     password = os.environ.get(ENV_GMAIL_APP_PASSWORD, "").strip()
@@ -158,7 +173,10 @@ def _send_email(subject: str, body: str) -> bool:
             server.starttls()
             server.ehlo()
             server.login(sender, password)
-            server.send_message(msg)
+            refused = server.send_message(msg)
+            if refused:
+                _log(f"Email refused for recipients: {refused}")
+                return False
         return True
     except Exception as exc:
         _log(f"Email send failed: {exc}")
@@ -199,10 +217,20 @@ def main() -> int:
 
         new_areas = current_areas - previous_areas
         restored_areas = previous_areas - current_areas
+        force_notify = _env_true(ENV_FORCE_NOTIFY)
+        _log(
+            "Changes summary: "
+            f"new={len(new_areas)} restored={len(restored_areas)} "
+            f"force_notify={force_notify}"
+        )
 
         if new_areas or restored_areas:
             message = _build_message(new_areas, restored_areas)
             subject = "DEDDIE Power Outage Updates"
+            _send_email(subject, message)
+        elif force_notify:
+            message = _build_snapshot_message(current_areas)
+            subject = "DEDDIE Power Outage Updates (Test)"
             _send_email(subject, message)
         else:
             _log("No changes detected; no notification sent")

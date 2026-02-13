@@ -31,3 +31,6 @@ Every 15 minutes, the workflow:
 Workflow file: `.github/workflows/monitor.yml`
 
 Manual run is also supported from the GitHub Actions UI.
+Manual run inputs:
+- `force_notify` to send a test notification even if no changes
+- `debug_log` to enable extra debug logging
