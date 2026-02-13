@@ -1,15 +1,21 @@
 ﻿import json
 import os
-import sys
-from collections import defaultdict
-from datetime import datetime, timezone
-from typing import Dict, Iterable, List, Set, Tuple
 import smtplib
+import sys
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
+from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+
+try:
+    from zoneinfo import ZoneInfo
+
+    ATHENS_TZ = ZoneInfo("Europe/Athens")
+except Exception:
+    ATHENS_TZ = timezone(timedelta(hours=2))
 
 API_BASE = (
     "https://apps.deddie.gr/gr.deddie.pfr-2.1/rest/powercutreport/"
@@ -28,9 +34,9 @@ ENV_NE_IDS = "NE_IDS"
 ENV_GMAIL_ADDRESS = "GMAIL_ADDRESS"
 ENV_GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"
 ENV_TEAMS_CHANNEL_EMAIL = "TEAMS_CHANNEL_EMAIL"
-FROM_ALIAS_EMAIL = "iokalpaktsis@gmail.com"
 ENV_DEBUG_LOG = "DEBUG_LOG"
 ENV_FORCE_NOTIFY = "FORCE_NOTIFY"
+FROM_ALIAS_EMAIL = "iokalpaktsis@gmail.com"
 
 AREA_LIST_KEYS = (
     "lektikoGenikonDiakoponList",
@@ -38,7 +44,6 @@ AREA_LIST_KEYS = (
     "exyphretoumeniDhmEnothtaList",
     "kallikratikiDhmotikiEnothtaList",
     "kallikratikosOTAList",
-    "kallikratikiNomarxiaList",
 )
 
 AREA_TEXT_KEYS = (
@@ -67,9 +72,57 @@ NOMOS_TEXT_KEYS = (
     "nomos",
 )
 
+CAUSE_LABELS = {
+    "OUTAGE": "Emergency Outage",
+    "EMERGENCY": "Emergency Outage",
+    "SCHEDULED": "Scheduled Outage",
+}
+
 
 def _log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).isoformat()}] {msg}")
+
+
+def _env_true(name: str) -> bool:
+    value = os.environ.get(name, "").strip().lower()
+    return value in {"1", "true", "yes", "y", "on"}
+
+
+def _normalize_text(value: str) -> str:
+    return " ".join(value.strip().split())
+
+
+def _to_int(value: object) -> Optional[int]:
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float):
+        return int(value)
+    if isinstance(value, str):
+        s = value.strip()
+        if s and s.lstrip("-").isdigit():
+            return int(s)
+    return None
+
+
+def _format_epoch_ms(value: object) -> str:
+    ms = _to_int(value)
+    if ms is None:
+        return "Unknown"
+    try:
+        dt = datetime.fromtimestamp(ms / 1000, tz=timezone.utc).astimezone(ATHENS_TZ)
+        return dt.strftime("%d/%m/%Y %H:%M")
+    except Exception:
+        return str(ms)
+
+
+def _get_ne_ids() -> List[str]:
+    raw = os.environ.get(ENV_NE_IDS, "").strip()
+    if not raw:
+        return NE_IDS
+    parts = [p.strip() for p in raw.split(",")]
+    return [p for p in parts if p]
 
 
 def _build_session() -> requests.Session:
@@ -84,26 +137,13 @@ def _build_session() -> requests.Session:
     session = requests.Session()
     session.headers.update(
         {
-            "User-Agent": "deddie-powercuts-monitor/1.0",
+            "User-Agent": "deddie-powercuts-monitor/2.0",
             "Accept": "application/json",
         }
     )
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     return session
-
-
-def _env_true(name: str) -> bool:
-    value = os.environ.get(name, "").strip().lower()
-    return value in {"1", "true", "yes", "y", "on"}
-
-
-def _get_ne_ids() -> List[str]:
-    raw = os.environ.get(ENV_NE_IDS, "").strip()
-    if not raw:
-        return NE_IDS
-    parts = [p.strip() for p in raw.split(",")]
-    return [p for p in parts if p]
 
 
 def _safe_get_json(session: requests.Session, url: str) -> List[dict]:
@@ -122,10 +162,6 @@ def _safe_get_json(session: requests.Session, url: str) -> List[dict]:
     return data
 
 
-def _normalize_text(value: str) -> str:
-    return " ".join(value.strip().split())
-
-
 def _extract_texts(item: dict, keys: Iterable[str]) -> List[str]:
     texts: List[str] = []
     for key in keys:
@@ -134,6 +170,7 @@ def _extract_texts(item: dict, keys: Iterable[str]) -> List[str]:
             texts.append(value)
     if texts:
         return texts
+
     for item_key, value in item.items():
         if not isinstance(value, str) or not value.strip():
             continue
@@ -143,7 +180,7 @@ def _extract_texts(item: dict, keys: Iterable[str]) -> List[str]:
     return texts
 
 
-def _extract_areas_from_outage(outage: dict) -> Set[str]:
+def _extract_areas(outage: dict) -> List[str]:
     areas: Set[str] = set()
     for key in AREA_LIST_KEYS:
         items = outage.get(key)
@@ -151,8 +188,7 @@ def _extract_areas_from_outage(outage: dict) -> Set[str]:
             continue
         for item in items:
             if isinstance(item, dict):
-                texts = _extract_texts(item, AREA_TEXT_KEYS)
-                for text in texts:
+                for text in _extract_texts(item, AREA_TEXT_KEYS):
                     normalized = _normalize_text(text)
                     if normalized and not normalized.isdigit():
                         areas.add(normalized)
@@ -160,53 +196,25 @@ def _extract_areas_from_outage(outage: dict) -> Set[str]:
                 normalized = _normalize_text(item)
                 if normalized and not normalized.isdigit():
                     areas.add(normalized)
-    return areas
+    return sorted(areas)
 
 
-def _extract_nomos_from_outage(outage: dict) -> Set[str]:
-    names: Set[str] = set()
+def _extract_nomos_from_payload(outage: dict) -> Optional[str]:
     for key in NOMOS_LIST_KEYS:
         items = outage.get(key)
         if not isinstance(items, list):
             continue
         for item in items:
             if isinstance(item, dict):
-                texts = _extract_texts(item, NOMOS_TEXT_KEYS)
-                for text in texts:
+                for text in _extract_texts(item, NOMOS_TEXT_KEYS):
                     normalized = _normalize_text(text)
                     if normalized and not normalized.isdigit():
-                        names.add(normalized)
+                        return normalized
             elif isinstance(item, str):
                 normalized = _normalize_text(item)
                 if normalized and not normalized.isdigit():
-                    names.add(normalized)
-    return names
-
-
-def _extract_eta(outage: dict) -> str:
-    for key in ("end_date_announced", "end_date"):
-        value = outage.get(key)
-        if isinstance(value, str) and value.strip():
-            return value.strip()
-    return ""
-
-
-def _format_eta(raw: str) -> str:
-    if not raw:
-        return "Άγνωστη"
-    value = raw.strip()
-    try:
-        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
-        return dt.strftime("%d/%m/%Y %H:%M")
-    except Exception:
-        pass
-    for fmt in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M"):
-        try:
-            dt = datetime.strptime(value, fmt)
-            return dt.strftime("%d/%m/%Y %H:%M")
-        except Exception:
-            continue
-    return value
+                    return normalized
+    return None
 
 
 def _load_ne_id_map() -> Dict[str, str]:
@@ -218,214 +226,214 @@ def _load_ne_id_map() -> Dict[str, str]:
         if not isinstance(data, dict):
             _log("ne_id_map.json must be a JSON object")
             return {}
-        mapped = {}
+        result: Dict[str, str] = {}
         for key, value in data.items():
-            if not value:
-                continue
-            mapped[str(key)] = str(value)
-        return mapped
+            if value:
+                result[str(key)] = str(value)
+        return result
     except Exception as exc:
         _log(f"Failed to read ne_id_map.json: {exc}")
-    return {}
-
-
-def _resolve_nomos_names(outage: dict, ne_id: str, ne_map: Dict[str, str]) -> Set[str]:
-    names = _extract_nomos_from_outage(outage)
-    if not names and ne_id:
-        mapped = ne_map.get(ne_id)
-        if mapped:
-            names.add(mapped)
-    if not names:
-        names.add(f"ΝΕ {ne_id}" if ne_id else "Χωρίς νομό")
-    return names
-
-
-def _encode_key(nomos: str, area: str) -> str:
-    return f"{nomos}::{area}"
-
-
-def _decode_key(key: str) -> Tuple[str, str]:
-    if "::" in key:
-        nomos, area = key.split("::", 1)
-        return nomos, area
-    return "Χωρίς νομό", key
-
-
-def _format_nomos_label(nomos: str) -> str:
-    lowered = nomos.lower()
-    if lowered.startswith("νομός"):
-        return nomos
-    return f"Νομός {nomos}"
-
-
-def _group_by_nomos_eta(keys: Set[str], key_to_eta: Dict[str, str]) -> Dict[str, Dict[str, Set[str]]]:
-    grouped: Dict[str, Dict[str, Set[str]]] = defaultdict(lambda: defaultdict(set))
-    for key in keys:
-        nomos, area = _decode_key(key)
-        eta_display = _format_eta(key_to_eta.get(key, ""))
-        grouped[nomos][eta_display].add(area)
-    return grouped
-
-
-def _group_by_nomos(keys: Set[str]) -> Dict[str, Set[str]]:
-    grouped: Dict[str, Set[str]] = defaultdict(set)
-    for key in keys:
-        nomos, area = _decode_key(key)
-        grouped[nomos].add(area)
-    return grouped
-
-
-def _append_grouped_with_eta(lines: List[str], title: str, grouped: Dict[str, Dict[str, Set[str]]]) -> None:
-    if not grouped:
-        return
-    lines.append(title)
-    for nomos in sorted(grouped):
-        eta_map = grouped[nomos]
-        for eta in sorted(eta_map):
-            lines.append(f"{_format_nomos_label(nomos)} — Εκτιμώμενη αποκατάσταση: {eta}")
-            for area in sorted(eta_map[eta]):
-                lines.append(f"• {area}")
-            lines.append("")
-    if lines and lines[-1] == "":
-        lines.pop()
-
-
-def _append_grouped(lines: List[str], title: str, grouped: Dict[str, Set[str]]) -> None:
-    if not grouped:
-        return
-    lines.append(title)
-    nomoi = sorted(grouped)
-    for idx, nomos in enumerate(nomoi):
-        lines.append(_format_nomos_label(nomos))
-        for area in sorted(grouped[nomos]):
-            lines.append(f"• {area}")
-        if idx != len(nomoi) - 1:
-            lines.append("")
-
-
-def _append_eta_changes(lines: List[str], changes: List[Tuple[str, str, str]]) -> None:
-    if not changes:
-        return
-    lines.append("⏱️ Ενημέρωση αποκατάστασης")
-    grouped: Dict[str, List[Tuple[str, str, str]]] = defaultdict(list)
-    for key, old_eta, new_eta in changes:
-        nomos, area = _decode_key(key)
-        grouped[nomos].append((area, old_eta, new_eta))
-    for nomos in sorted(grouped):
-        lines.append(_format_nomos_label(nomos))
-        for area, old_eta, new_eta in sorted(grouped[nomos]):
-            lines.append(
-                f"• {area}: {_format_eta(old_eta)} → {_format_eta(new_eta)}"
-            )
-        lines.append("")
-    if lines and lines[-1] == "":
-        lines.pop()
-
-
-def _build_message(
-    new_keys: Set[str],
-    restored_keys: Set[str],
-    eta_changes: List[Tuple[str, str, str]],
-    current_map: Dict[str, str],
-) -> str:
-    lines: List[str] = []
-    _append_grouped_with_eta(
-        lines, "⚡ ΝΕΕΣ διακοπές", _group_by_nomos_eta(new_keys, current_map)
-    )
-    if lines and restored_keys:
-        lines.append("")
-    _append_grouped(lines, "✅ Αποκαταστάθηκαν", _group_by_nomos(restored_keys))
-    if eta_changes:
-        if lines:
-            lines.append("")
-        _append_eta_changes(lines, eta_changes)
-    return "\n".join(lines)
-
-
-def _build_snapshot_message(current_map: Dict[str, str]) -> str:
-    if not current_map:
-        return "ℹ️ Καμία ενεργή διακοπή (test)"
-    lines: List[str] = []
-    _append_grouped_with_eta(
-        lines,
-        "ℹ️ Τρέχουσες διακοπές (test)",
-        _group_by_nomos_eta(set(current_map.keys()), current_map),
-    )
-    return "\n".join(lines)
-
-
-def _read_state() -> Dict[str, str]:
-    if not os.path.exists(STATE_PATH):
         return {}
+
+
+def _resolve_nomos(outage: dict, ne_id: str, ne_map: Dict[str, str]) -> str:
+    payload_nomos = _extract_nomos_from_payload(outage)
+    if payload_nomos:
+        return payload_nomos
+    mapped = ne_map.get(ne_id)
+    if mapped:
+        return mapped
+    return f"ΝΕ {ne_id}" if ne_id else "Χωρίς νομό"
+
+
+def _nomos_tag_name(nomos: str) -> str:
+    text = nomos.strip().upper()
+    if text.endswith("Σ"):
+        return text[:-1]
+    return text
+
+
+def _incident_type_label(cause: str, is_scheduled: bool) -> str:
+    cause_upper = (cause or "").strip().upper()
+    if is_scheduled:
+        return "Scheduled Outage"
+    if cause_upper in CAUSE_LABELS:
+        return CAUSE_LABELS[cause_upper]
+    if not cause_upper:
+        return "Unknown"
+    return cause_upper.replace("_", " ").title()
+
+
+def _incident_status_label(is_active: bool, resolved: bool = False) -> str:
+    if resolved:
+        return "Restored"
+    return "Active" if is_active else "Inactive"
+
+
+def _incident_key(incident: Dict[str, object]) -> str:
+    return f"{incident['ne_id']}:{incident['incident_id']}"
+
+
+def _incident_signature(incident: Dict[str, object]) -> Tuple[object, ...]:
+    return (
+        incident.get("incident_id"),
+        incident.get("ne_id"),
+        incident.get("nomos"),
+        tuple(incident.get("areas", [])),
+        incident.get("start_date"),
+        incident.get("end_date"),
+        incident.get("end_date_announced"),
+        incident.get("creator"),
+        incident.get("cause"),
+        bool(incident.get("is_active", True)),
+        bool(incident.get("is_scheduled", False)),
+    )
+
+
+def _incident_sort_key(incident: Dict[str, object]) -> Tuple[str, int]:
+    ne_id = str(incident.get("ne_id", ""))
+    inc_id = _to_int(incident.get("incident_id"))
+    return ne_id, inc_id if inc_id is not None else 0
+
+
+def _build_incident_record(
+    outage: dict,
+    ne_id: str,
+    ne_map: Dict[str, str],
+) -> Optional[Dict[str, object]]:
+    incident_id = _to_int(outage.get("id"))
+    if incident_id is None:
+        return None
+
+    areas = _extract_areas(outage)
+    if not areas:
+        return None
+
+    return {
+        "incident_id": incident_id,
+        "ne_id": ne_id,
+        "nomos": _resolve_nomos(outage, ne_id, ne_map),
+        "areas": areas,
+        "start_date": _to_int(outage.get("start_date")),
+        "end_date": _to_int(outage.get("end_date")),
+        "end_date_announced": _to_int(outage.get("end_date_announced")),
+        "creator": str(outage.get("creator") or "Unknown"),
+        "cause": str(outage.get("cause") or ""),
+        "is_active": bool(outage.get("is_active", True)),
+        "is_scheduled": bool(outage.get("is_scheduled", False)),
+    }
+
+
+def _merge_incident(
+    current: Dict[str, Dict[str, object]],
+    incident: Dict[str, object],
+) -> None:
+    key = _incident_key(incident)
+    existing = current.get(key)
+    if not existing:
+        current[key] = incident
+        return
+
+    existing_score = _to_int(existing.get("end_date_announced")) or _to_int(existing.get("end_date")) or 0
+    new_score = _to_int(incident.get("end_date_announced")) or _to_int(incident.get("end_date")) or 0
+    if new_score >= existing_score:
+        current[key] = incident
+
+
+def _build_incident_block(
+    incident: Dict[str, object],
+    title: str,
+    status_override: Optional[str] = None,
+) -> str:
+    areas = incident.get("areas", [])
+    area_text = ", ".join(areas) if isinstance(areas, list) and areas else "Unknown"
+
+    lines = [
+        f"[{_nomos_tag_name(str(incident.get('nomos', 'ΧΩΡΙΣ ΝΟΜΟ')))} {incident.get('ne_id', '')}] {title}",
+        "",
+        "Affected Areas:",
+        area_text,
+        "",
+        f"Start: {_format_epoch_ms(incident.get('start_date'))}",
+        f"ETA Restore: {_format_epoch_ms(incident.get('end_date'))}",
+        f"Announced Restore: {_format_epoch_ms(incident.get('end_date_announced'))}",
+        "",
+        f"Incident ID: {incident.get('incident_id', 'Unknown')}",
+        f"Created By: {incident.get('creator', 'Unknown')}",
+        f"Type: {_incident_type_label(str(incident.get('cause', '')), bool(incident.get('is_scheduled', False)))}",
+        f"Status: {status_override or _incident_status_label(bool(incident.get('is_active', True)))}",
+    ]
+    return "\n".join(lines)
+
+
+def _build_change_message(
+    new_incidents: List[Dict[str, object]],
+    updated_incidents: List[Dict[str, object]],
+    restored_incidents: List[Dict[str, object]],
+) -> str:
+    blocks: List[str] = []
+
+    for incident in sorted(new_incidents, key=_incident_sort_key):
+        blocks.append(_build_incident_block(incident, "ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ"))
+
+    for incident in sorted(updated_incidents, key=_incident_sort_key):
+        blocks.append(_build_incident_block(incident, "ΕΝΗΜΕΡΩΣΗ ΔΙΑΚΟΠΗΣ"))
+
+    for incident in sorted(restored_incidents, key=_incident_sort_key):
+        blocks.append(
+            _build_incident_block(
+                incident,
+                "ΑΠΟΚΑΤΑΣΤΑΣΗ",
+                status_override=_incident_status_label(False, resolved=True),
+            )
+        )
+
+    return "\n\n".join(blocks)
+
+
+def _build_snapshot_message(current_incidents: List[Dict[str, object]]) -> str:
+    blocks: List[str] = []
+    for incident in sorted(current_incidents, key=_incident_sort_key):
+        blocks.append(_build_incident_block(incident, "ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ (TEST)"))
+    if not blocks:
+        return "No active outages (test)."
+    return "\n\n".join(blocks)
+
+
+def _read_state() -> Tuple[Dict[str, Dict[str, object]], bool]:
+    if not os.path.exists(STATE_PATH):
+        return {}, False
+
     try:
         with open(STATE_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
-        areas = data.get("areas", {})
-        if isinstance(areas, dict):
-            return {str(k): str(v) for k, v in areas.items()}
-        if isinstance(areas, list):
-            mapped: Dict[str, str] = {}
-            for item in areas:
-                if isinstance(item, str):
-                    mapped[item] = ""
-                elif isinstance(item, dict):
-                    key = item.get("key") or item.get("area")
-                    if key:
-                        mapped[str(key)] = str(item.get("eta", ""))
-            return mapped
     except Exception as exc:
         _log(f"Failed to read state.json: {exc}")
-    return {}
+        return {}, False
+
+    incidents = data.get("incidents")
+    if isinstance(incidents, dict):
+        normalized: Dict[str, Dict[str, object]] = {}
+        for key, value in incidents.items():
+            if isinstance(value, dict):
+                normalized[str(key)] = value
+        return normalized, False
+
+    # Legacy formats existed under "areas". Treat as migration and avoid false restore spam.
+    if "areas" in data:
+        return {}, True
+
+    return {}, False
 
 
-def _write_state(current_map: Dict[str, str]) -> None:
+def _write_state(current: Dict[str, Dict[str, object]]) -> None:
     payload = {
-        "areas": {k: v for k, v in sorted(current_map.items())},
+        "version": 2,
+        "incidents": {k: current[k] for k in sorted(current)},
         "updated_at": datetime.now(timezone.utc).isoformat(),
     }
     with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-
-
-def _remap_legacy_previous_keys(
-    previous_map: Dict[str, str], current_map: Dict[str, str]
-) -> Dict[str, str]:
-    # Backward compatibility: older state entries were stored as area-only keys
-    # (without "Nomos::Area"). Try to map them to current keys by area name.
-    area_to_current_keys: Dict[str, List[str]] = defaultdict(list)
-    for key in current_map:
-        nomos, area = _decode_key(key)
-        if nomos and area:
-            area_to_current_keys[area].append(key)
-
-    remapped: Dict[str, str] = {}
-    legacy_count = 0
-    mapped_count = 0
-    dropped_count = 0
-
-    for key, eta in previous_map.items():
-        if "::" in key:
-            remapped[key] = eta
-            continue
-
-        legacy_count += 1
-        matches = area_to_current_keys.get(key, [])
-        if matches:
-            mapped_count += 1
-            for match_key in matches:
-                if match_key not in remapped or (not remapped[match_key] and eta):
-                    remapped[match_key] = eta
-        else:
-            # Drop unmatched legacy keys to avoid false "restored" spam.
-            dropped_count += 1
-
-    if legacy_count:
-        _log(
-            "State migration: "
-            f"legacy={legacy_count} mapped={mapped_count} dropped={dropped_count}"
-        )
-
-    return remapped
 
 
 def _send_email(subject: str, body: str) -> bool:
@@ -458,104 +466,96 @@ def _send_email(subject: str, body: str) -> bool:
         return True
     except Exception as exc:
         _log(f"Email send failed: {exc}")
-    return False
+        return False
 
 
-def _debug_sample(payloads: List[dict]) -> None:
-    if not os.environ.get(ENV_DEBUG_LOG):
+def _debug_payload_sample(payloads: List[dict]) -> None:
+    if not _env_true(ENV_DEBUG_LOG):
         return
+
     if not payloads:
-        _log("DEBUG: no payloads to sample")
+        _log("DEBUG: no payloads")
         return
+
     first = payloads[0]
-    if isinstance(first, dict):
-        keys = sorted(first.keys())
-        _log(f"DEBUG: first payload keys: {keys}")
-        for key in AREA_LIST_KEYS:
-            items = first.get(key)
-            if isinstance(items, list):
-                _log(f"DEBUG: {key} length: {len(items)}")
-                if items:
-                    first_item = items[0]
-                    if isinstance(first_item, dict):
-                        _log(f"DEBUG: {key} first item keys: {sorted(first_item.keys())}")
-    else:
+    if not isinstance(first, dict):
         _log(f"DEBUG: first payload type: {type(first)}")
+        return
+
+    _log(f"DEBUG: first payload keys: {sorted(first.keys())}")
+    for key in AREA_LIST_KEYS + NOMOS_LIST_KEYS:
+        items = first.get(key)
+        if isinstance(items, list):
+            _log(f"DEBUG: {key} length: {len(items)}")
+            if items and isinstance(items[0], dict):
+                _log(f"DEBUG: {key} first item keys: {sorted(items[0].keys())}")
 
 
 def main() -> int:
     try:
         session = _build_session()
-        all_payloads: List[dict] = []
         ne_map = _load_ne_id_map()
-        debug_enabled = _env_true(ENV_DEBUG_LOG)
+
+        all_payloads: List[dict] = []
+        current_incidents: Dict[str, Dict[str, object]] = {}
+
         for ne_id in _get_ne_ids():
             url = API_BASE.format(ne_id=ne_id)
             payload = _safe_get_json(session, url)
-            if debug_enabled:
+            if _env_true(ENV_DEBUG_LOG):
                 _log(f"DEBUG: NE {ne_id} payloads: {len(payload)}")
-            for outage in payload:
-                if isinstance(outage, dict):
-                    outage["_ne_id"] = ne_id
             all_payloads.extend(payload)
 
+            for outage in payload:
+                if not isinstance(outage, dict):
+                    continue
+                incident = _build_incident_record(outage, ne_id, ne_map)
+                if incident:
+                    _merge_incident(current_incidents, incident)
+
         _log(f"Fetched payloads: {len(all_payloads)}")
-        _debug_sample(all_payloads)
+        _debug_payload_sample(all_payloads)
+        _log(f"Extracted incidents: {len(current_incidents)}")
 
-        current_map: Dict[str, str] = {}
-        for outage in all_payloads:
-            if not isinstance(outage, dict):
-                continue
-            ne_id = str(outage.get("_ne_id", "")).strip()
-            nomos_names = _resolve_nomos_names(outage, ne_id, ne_map)
-            areas = _extract_areas_from_outage(outage)
-            if not areas:
-                continue
-            eta_raw = _extract_eta(outage)
-            for nomos in nomos_names:
-                for area in areas:
-                    key = _encode_key(nomos, area)
-                    if key not in current_map or (not current_map[key] and eta_raw):
-                        current_map[key] = eta_raw
+        previous_incidents, legacy_state_detected = _read_state()
+        if legacy_state_detected and previous_incidents == {} and current_incidents:
+            _log("Legacy state detected; suppressing one-time migration notifications")
+            previous_incidents = dict(current_incidents)
 
-        previous_map = _read_state()
-        previous_map = _remap_legacy_previous_keys(previous_map, current_map)
-        _log(
-            f"Extracted areas: {len(current_map)} across "
-            f"{len(_group_by_nomos(set(current_map.keys())))} nomoi"
-        )
+        current_keys = set(current_incidents.keys())
+        previous_keys = set(previous_incidents.keys())
 
-        current_keys = set(current_map.keys())
-        previous_keys = set(previous_map.keys())
         new_keys = current_keys - previous_keys
         restored_keys = previous_keys - current_keys
+        shared_keys = current_keys & previous_keys
 
-        eta_changes: List[Tuple[str, str, str]] = []
-        for key in current_keys & previous_keys:
-            old_eta = previous_map.get(key, "")
-            new_eta = current_map.get(key, "")
-            if (old_eta or "") != (new_eta or ""):
-                eta_changes.append((key, old_eta, new_eta))
+        updated_keys = [
+            key
+            for key in shared_keys
+            if _incident_signature(current_incidents[key]) != _incident_signature(previous_incidents[key])
+        ]
 
         force_notify = _env_true(ENV_FORCE_NOTIFY)
         _log(
             "Changes summary: "
-            f"new={len(new_keys)} restored={len(restored_keys)} "
-            f"eta_changed={len(eta_changes)} force_notify={force_notify}"
+            f"new={len(new_keys)} restored={len(restored_keys)} updated={len(updated_keys)} "
+            f"force_notify={force_notify}"
         )
 
-        if new_keys or restored_keys or eta_changes:
-            message = _build_message(new_keys, restored_keys, eta_changes, current_map)
-            subject = "DEDDIE Power Outage Updates"
-            _send_email(subject, message)
+        if new_keys or restored_keys or updated_keys:
+            message = _build_change_message(
+                [current_incidents[k] for k in new_keys],
+                [current_incidents[k] for k in updated_keys],
+                [previous_incidents[k] for k in restored_keys],
+            )
+            _send_email("DEDDIE Power Outage Updates", message)
         elif force_notify:
-            message = _build_snapshot_message(current_map)
-            subject = "DEDDIE Power Outage Updates (Test)"
-            _send_email(subject, message)
+            message = _build_snapshot_message(list(current_incidents.values()))
+            _send_email("DEDDIE Power Outage Updates (Test)", message)
         else:
             _log("No changes detected; no notification sent")
 
-        _write_state(current_map)
+        _write_state(current_incidents)
         return 0
     except Exception as exc:
         _log(f"Unexpected error: {exc}")

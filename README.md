@@ -9,6 +9,7 @@ Monitors the official DEDDIE public REST API for power outages and sends notific
 - No spam: only notifies on changes
 - Groups outages by Nomos (prefecture) when mapping is provided
 - Includes estimated restoration time in notifications
+- Incident-based alert format with full details (ID, creator, type, status)
 
 ## Setup
 1. Enable 2-Step Verification on the Gmail account that will send the alerts.
@@ -34,14 +35,38 @@ Example (placeholder):
 
 If a mapping is missing, the email will show `ΝΕ <id>` as the fallback label.
 
+## Alert Format
+Each incident is sent as a detailed block:
+
+```text
+[ΗΛΕΙΑ 0703] ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ
+
+Affected Areas:
+Σκιλλούντος, Αρχαίας Ολυμπίας, Πύργου, Φολόης, Ωλένης
+
+Start: 13/02/2026 08:58
+ETA Restore: 13/02/2026 12:18
+Announced Restore: 13/02/2026 12:30
+
+Incident ID: 24002
+Created By: M.Kalfountzou
+Type: Emergency Outage
+Status: Active
+```
+
+Notification types:
+- `ΕΝΕΡΓΗ ΔΙΑΚΟΠΗ` for new incidents
+- `ΕΝΗΜΕΡΩΣΗ ΔΙΑΚΟΠΗΣ` when incident details change (ETA/areas/status/etc.)
+- `ΑΠΟΚΑΤΑΣΤΑΣΗ` when an incident is no longer present in API results
+
 ## How It Works
 Every 15 minutes, the workflow:
 1. Calls the DEDDIE API for each configured region ID
 2. Extracts affected area names
 3. Groups by Nomos
 4. Tracks restoration ETA (`end_date_announced`/`end_date`)
-5. Compares with previous run (`state.json`)
-6. Sends email alerts only for **new**, **restored**, or **ETA-changed** areas
+5. Compares incidents with previous run (`state.json`)
+6. Sends email alerts only for **new**, **updated**, or **restored** incidents
 7. Commits updated `state.json` back to the repo
 
 ## GitHub Actions
