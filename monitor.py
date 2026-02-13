@@ -410,7 +410,7 @@ def _build_rows_table_html(title: str, rows: List[Dict[str, str]]) -> str:
 
 def _build_change_payloads(
     new_incidents: List[Dict[str, object]],
-    updated_incidents: List[Dict[str, object]],
+    known_incidents: List[Dict[str, object]],
     restored_incidents: List[Dict[str, object]],
 ) -> Tuple[str, str]:
     text_sections: List[str] = []
@@ -421,10 +421,13 @@ def _build_change_payloads(
         text_sections.append(_build_rows_text("ΝΕΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
         html_sections.append(_build_rows_table_html("ΝΕΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
 
-    if updated_incidents:
-        rows = [_incident_to_row(i) for i in sorted(updated_incidents, key=_incident_sort_key)]
+    if known_incidents:
+        rows = [_incident_to_row(i) for i in sorted(known_incidents, key=_incident_sort_key)]
         text_sections.append(_build_rows_text("ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
         html_sections.append(_build_rows_table_html("ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ", rows))
+    else:
+        text_sections.append("ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ\nΚαμία ενεργή διακοπή.")
+        html_sections.append("<h3 style='margin:16px 0 8px 0;'>ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ</h3><p>Καμία ενεργή διακοπή.</p>")
 
     if restored_incidents:
         rows = [
@@ -597,16 +600,17 @@ def main() -> int:
         ]
 
         force_notify = _env_true(ENV_FORCE_NOTIFY)
+        known_keys = current_keys - new_keys
         _log(
             "Changes summary: "
             f"new={len(new_keys)} restored={len(restored_keys)} updated={len(updated_keys)} "
-            f"force_notify={force_notify}"
+            f"known={len(known_keys)} force_notify={force_notify}"
         )
 
         if new_keys or restored_keys or updated_keys:
             text_body, html_body = _build_change_payloads(
                 [current_incidents[k] for k in new_keys],
-                [current_incidents[k] for k in updated_keys],
+                [current_incidents[k] for k in known_keys],
                 [previous_incidents[k] for k in restored_keys],
             )
             _send_email("DEDDIE Power Outage Updates", text_body, html_body)

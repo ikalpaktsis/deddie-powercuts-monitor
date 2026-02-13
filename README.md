@@ -71,6 +71,11 @@ Notification types:
 - `ΕΝΗΜΕΡΩΣΗ ΔΙΑΚΟΠΗΣ` when incident details change (ETA/areas/status/etc.)
 - `ΑΠΟΚΑΤΑΣΤΑΣΗ` when an incident is no longer present in API results
 
+Every change notification includes a full current snapshot:
+- `ΝΕΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ` (newly detected now)
+- `ΓΝΩΣΤΕΣ ΔΙΑΚΟΠΕΣ ΔΕΔΔΗΕ` (all currently active incidents)
+- `ΑΠΟΚΑΤΑΣΤΑΣΕΙΣ` (incidents that disappeared since last run)
+
 ## How It Works
 Every 15 minutes, the workflow:
 1. Calls the DEDDIE API for each configured region ID
