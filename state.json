@@ -16,6 +16,23 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0703:24007": {
+      "incident_id": 24007,
+      "ne_id": "0703",
+      "nomos": "ΝΕ 0703",
+      "areas": [
+        "Ανδραβίδας",
+        "Βουπρασίας",
+        "Λεχαινών"
+      ],
+      "start_date": 1770980400000,
+      "end_date": 1770991200000,
+      "end_date_announced": 1770993000000,
+      "creator": "M.Kalfountzou",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "1:24006": {
       "incident_id": 24006,
       "ne_id": "1",
@@ -32,5 +49,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T11:54:31.241966+00:00"
+  "updated_at": "2026-02-13T12:38:05.221343+00:00"
 }
