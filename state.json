@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-13T19:55:25.579582+00:00"
+  "incidents": {
+    "0701:24012": {
+      "incident_id": 24012,
+      "ne_id": "0701",
+      "nomos": "Αιτωλοακαρνανίας",
+      "areas": [
+        "Φυτειών"
+      ],
+      "start_date": 1770994800000,
+      "end_date": 1771081200000,
+      "end_date_announced": 1771083000000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-13T20:50:00.443152+00:00"
 }
