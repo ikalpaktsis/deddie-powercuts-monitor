@@ -6,7 +6,7 @@
       "ne_id": "1304",
       "nomos": "Χανίων",
       "areas": [
-        "Πλατανιά"
+        "Κισσάμου"
       ],
       "start_date": 1770995880000,
       "end_date": 1771003080000,
@@ -15,7 +15,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "1304:24010": {
+      "incident_id": 24010,
+      "ne_id": "1304",
+      "nomos": "Χανίων",
+      "areas": [
+        "Χανίων"
+      ],
+      "start_date": 1770999240000,
+      "end_date": 1771006440000,
+      "end_date_announced": 1771007400000,
+      "creator": "S.Karavasilis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T16:28:22.988284+00:00"
+  "updated_at": "2026-02-13T16:48:51.377120+00:00"
 }
