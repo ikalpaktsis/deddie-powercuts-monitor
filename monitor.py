@@ -237,7 +237,7 @@ def _debug_sample(payloads: List[dict]) -> None:
                 if items:
                     first_item = items[0]
                     if isinstance(first_item, dict):
-                        _log(f\"DEBUG: {key} first item keys: {sorted(first_item.keys())}\")
+                        _log(f"DEBUG: {key} first item keys: {sorted(first_item.keys())}")
     else:
         _log(f"DEBUG: first payload type: {type(first)}")
 
