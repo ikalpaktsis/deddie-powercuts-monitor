@@ -17,22 +17,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "6:24008": {
-      "incident_id": 24008,
-      "ne_id": "6",
-      "nomos": "Δωδεκανήσου",
-      "areas": [
-        "Κω"
-      ],
-      "start_date": 1770986280000,
-      "end_date": 1770989880000,
-      "end_date_announced": 1770991200000,
-      "creator": "S.Mavrikakis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T13:29:51.214885+00:00"
+  "updated_at": "2026-02-13T13:42:27.531778+00:00"
 }
