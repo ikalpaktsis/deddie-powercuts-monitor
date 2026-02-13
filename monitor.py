@@ -30,6 +30,29 @@ FROM_ALIAS_EMAIL = "iokalpaktsis@gmail.com"
 ENV_DEBUG_LOG = "DEBUG_LOG"
 ENV_FORCE_NOTIFY = "FORCE_NOTIFY"
 
+AREA_LIST_KEYS = (
+    "lektikoGenikonDiakoponList",
+    "exyphretoumeniPerioxiList",
+    "exyphretoumeniDhmEnothtaList",
+    "kallikratikiDhmotikiEnothtaList",
+    "kallikratikosOTAList",
+    "kallikratikiNomarxiaList",
+)
+
+AREA_TEXT_KEYS = (
+    "text",
+    "name",
+    "perioxi",
+    "perioxh",
+    "description",
+    "title",
+    "ota",
+    "nomos",
+    "dhm_enothta",
+    "dhm_enothta_name",
+    "kallikratikos_ota",
+)
+
 
 def _log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).isoformat()}] {msg}")
@@ -88,18 +111,32 @@ def _safe_get_json(session: requests.Session, url: str) -> List[dict]:
 def _extract_areas(payloads: Iterable[dict]) -> Set[str]:
     areas: Set[str] = set()
     for outage in payloads:
-        items = outage.get("lektikoGenikonDiakoponList")
-        if not isinstance(items, list):
-            continue
-        for item in items:
-            if not isinstance(item, dict):
+        for key in AREA_LIST_KEYS:
+            items = outage.get(key)
+            if not isinstance(items, list):
                 continue
-            text = item.get("text")
-            if not text:
-                continue
-            normalized = " ".join(str(text).strip().split())
-            if normalized:
-                areas.add(normalized)
+            for item in items:
+                if isinstance(item, dict):
+                    texts = []
+                    for text_key in AREA_TEXT_KEYS:
+                        value = item.get(text_key)
+                        if isinstance(value, str) and value.strip():
+                            texts.append(value)
+                    if not texts:
+                        for item_key, value in item.items():
+                            if not isinstance(value, str) or not value.strip():
+                                continue
+                            lowered = item_key.lower()
+                            if "name" in lowered or "text" in lowered:
+                                texts.append(value)
+                    for text in texts:
+                        normalized = " ".join(text.strip().split())
+                        if normalized and not normalized.isdigit():
+                            areas.add(normalized)
+                elif isinstance(item, str):
+                    normalized = " ".join(item.strip().split())
+                    if normalized and not normalized.isdigit():
+                        areas.add(normalized)
     return areas
 
 
@@ -193,9 +230,14 @@ def _debug_sample(payloads: List[dict]) -> None:
     if isinstance(first, dict):
         keys = sorted(first.keys())
         _log(f"DEBUG: first payload keys: {keys}")
-        items = first.get("lektikoGenikonDiakoponList")
-        if isinstance(items, list):
-            _log(f"DEBUG: lektikoGenikonDiakoponList length: {len(items)}")
+        for key in AREA_LIST_KEYS:
+            items = first.get(key)
+            if isinstance(items, list):
+                _log(f"DEBUG: {key} length: {len(items)}")
+                if items:
+                    first_item = items[0]
+                    if isinstance(first_item, dict):
+                        _log(f\"DEBUG: {key} first item keys: {sorted(first_item.keys())}\")
     else:
         _log(f"DEBUG: first payload type: {type(first)}")
 
