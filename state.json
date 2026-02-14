@@ -1,22 +1,23 @@
 {
   "version": 2,
   "incidents": {
-    "7:24023": {
-      "incident_id": 24023,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0703:24022": {
+      "incident_id": 24022,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
       "areas": [
-        "Νέα Σμύρνη",
-        "Νέος Κόσμος"
+        "Ανδραβίδας",
+        "Βουπρασίας",
+        "Λεχαινών"
       ],
-      "start_date": 1771079760000,
-      "end_date": 1771085160000,
-      "end_date_announced": 1771086600000,
-      "creator": "E.Koukoli",
+      "start_date": 1771078200000,
+      "end_date": 1771087200000,
+      "end_date_announced": 1771088400000,
+      "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T15:43:15.164712+00:00"
+  "updated_at": "2026-02-14T16:01:51.129604+00:00"
 }
