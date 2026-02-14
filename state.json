@@ -1,6 +1,39 @@
 {
   "version": 2,
   "incidents": {
+    "0202:24015": {
+      "incident_id": 24015,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Κρυονέρι",
+        "Λοφίσκος"
+      ],
+      "start_date": 1771032240000,
+      "end_date": 1771057440000,
+      "end_date_announced": 1771057800000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0402:24013": {
+      "incident_id": 24013,
+      "ne_id": "0402",
+      "nomos": "Θεσπρωτίας",
+      "areas": [
+        "Παραμυθιάς",
+        "Σουλίου",
+        "Φιλιατών"
+      ],
+      "start_date": 1771025700000,
+      "end_date": 1771068900000,
+      "end_date_announced": 1771070400000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0701:24012": {
       "incident_id": 24012,
       "ne_id": "0701",
@@ -17,5 +50,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-13T23:46:20.043940+00:00"
+  "updated_at": "2026-02-14T02:39:37.613726+00:00"
 }
