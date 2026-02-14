@@ -17,7 +17,23 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24023": {
+      "incident_id": 24023,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Νέα Σμύρνη",
+        "Νέος Κόσμος"
+      ],
+      "start_date": 1771079760000,
+      "end_date": 1771085160000,
+      "end_date_announced": 1771086600000,
+      "creator": "E.Koukoli",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T14:34:53.285350+00:00"
+  "updated_at": "2026-02-14T15:00:57.405576+00:00"
 }
