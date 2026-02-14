@@ -21,22 +21,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "7:24020": {
-      "incident_id": 24020,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Βύρωνας"
-      ],
-      "start_date": 1771064940000,
-      "end_date": 1771070340000,
-      "end_date_announced": 1771070400000,
-      "creator": "F.Ilia",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T11:57:03.648225+00:00"
+  "updated_at": "2026-02-14T13:08:52.904981+00:00"
 }
