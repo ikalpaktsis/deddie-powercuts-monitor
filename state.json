@@ -1,23 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0703:24022": {
-      "incident_id": 24022,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Ανδραβίδας",
-        "Βουπρασίας",
-        "Λεχαινών"
-      ],
-      "start_date": 1771078200000,
-      "end_date": 1771083600000,
-      "end_date_announced": 1771084800000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "7:24023": {
       "incident_id": 24023,
       "ne_id": "7",
@@ -35,5 +18,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T15:00:57.405576+00:00"
+  "updated_at": "2026-02-14T15:43:15.164712+00:00"
 }
