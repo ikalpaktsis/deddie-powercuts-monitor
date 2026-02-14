@@ -1,6 +1,27 @@
 {
   "version": 2,
   "incidents": {
+    "0102:24021": {
+      "incident_id": 24021,
+      "ne_id": "0102",
+      "nomos": "Έβρου",
+      "areas": [
+        "Ασημένιο",
+        "Διδυμότειχο",
+        "Ισαάκιο",
+        "Πετράδες",
+        "Πράγγιο",
+        "Πύθιο",
+        "Σοφικό"
+      ],
+      "start_date": 1771067400000,
+      "end_date": 1771078200000,
+      "end_date_announced": 1771079400000,
+      "creator": "A.Tzimos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "7:24020": {
       "incident_id": 24020,
       "ne_id": "7",
@@ -17,5 +38,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T11:01:41.663984+00:00"
+  "updated_at": "2026-02-14T11:38:14.219606+00:00"
 }
