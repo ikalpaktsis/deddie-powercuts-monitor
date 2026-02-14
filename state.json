@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-14T21:41:28.927963+00:00"
+  "incidents": {
+    "7:24026": {
+      "incident_id": 24026,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Αγία Παρασκευή"
+      ],
+      "start_date": 1771104900000,
+      "end_date": 1771110300000,
+      "end_date_announced": 1771111800000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-14T21:58:34.028379+00:00"
 }
