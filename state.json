@@ -1,23 +1,22 @@
 {
   "version": 2,
   "incidents": {
-    "0703:24022": {
-      "incident_id": 24022,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
+    "2:24024": {
+      "incident_id": 24024,
+      "ne_id": "2",
+      "nomos": "Κεφαλληνίας",
       "areas": [
-        "Ανδραβίδας",
-        "Βουπρασίας",
-        "Λεχαινών"
+        "Αργοστολίου",
+        "Παλλικής"
       ],
-      "start_date": 1771078200000,
-      "end_date": 1771087200000,
-      "end_date_announced": 1771088400000,
+      "start_date": 1771084800000,
+      "end_date": 1771093800000,
+      "end_date_announced": 1771095600000,
       "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T16:01:51.129604+00:00"
+  "updated_at": "2026-02-14T16:50:29.469276+00:00"
 }
