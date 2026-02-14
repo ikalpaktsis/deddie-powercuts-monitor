@@ -48,7 +48,24 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "0702:24018": {
+      "incident_id": 24018,
+      "ne_id": "0702",
+      "nomos": "Αχαΐας",
+      "areas": [
+        "Πατρέων",
+        "Φαρρών",
+        "Ωλενίας"
+      ],
+      "start_date": 1771053000000,
+      "end_date": 1771062000000,
+      "end_date_announced": 1771063200000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T07:21:00.270235+00:00"
+  "updated_at": "2026-02-14T07:55:18.881174+00:00"
 }
