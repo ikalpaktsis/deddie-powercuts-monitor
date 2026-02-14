@@ -18,38 +18,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0701:24012": {
-      "incident_id": 24012,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Φυτειών"
-      ],
-      "start_date": 1770994800000,
-      "end_date": 1771081200000,
-      "end_date_announced": 1771083000000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0702:24018": {
-      "incident_id": 24018,
-      "ne_id": "0702",
-      "nomos": "Αχαΐας",
-      "areas": [
-        "Πατρέων",
-        "Φαρρών",
-        "Ωλενίας"
-      ],
-      "start_date": 1771053000000,
-      "end_date": 1771062000000,
-      "end_date_announced": 1771063200000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "7:24019": {
       "incident_id": 24019,
       "ne_id": "7",
@@ -67,5 +35,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-14T09:15:22.502561+00:00"
+  "updated_at": "2026-02-14T09:55:25.851695+00:00"
 }
