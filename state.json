@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-15T17:59:32.092526+00:00"
+  "incidents": {
+    "0205:24050": {
+      "incident_id": 24050,
+      "ne_id": "0205",
+      "nomos": "Πιερίας",
+      "areas": [
+        "Νέα Τραπεζούντα"
+      ],
+      "start_date": 1771178160000,
+      "end_date": 1771185360000,
+      "end_date_announced": 1771185600000,
+      "creator": "P.Nianios",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-15T18:52:35.221207+00:00"
 }
