@@ -1,64 +1,17 @@
 {
   "version": 2,
   "incidents": {
-    "0207:24042": {
-      "incident_id": 24042,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
+    "0603:24046": {
+      "incident_id": 24046,
+      "ne_id": "0603",
+      "nomos": "Κέρκυρας",
       "areas": [
-        "Άγιος Πρόδρομος",
-        "Γεροπλάτανος"
+        "Εσπερίων"
       ],
-      "start_date": 1771149600000,
-      "end_date": 1771160400000,
-      "end_date_announced": 1771162200000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0801:24041": {
-      "incident_id": 24041,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
-      "areas": [
-        "Θίσβης"
-      ],
-      "start_date": 1771150440000,
-      "end_date": 1771157640000,
-      "end_date_announced": 1771158600000,
-      "creator": "A.Vergos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0802:24039": {
-      "incident_id": 24039,
-      "ne_id": "0802",
-      "nomos": "Ευβοίας",
-      "areas": [
-        "Χαλκιδέων"
-      ],
-      "start_date": 1771148640000,
-      "end_date": 1771155840000,
-      "end_date_announced": 1771156800000,
-      "creator": "A.Vergos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0804:24043": {
-      "incident_id": 24043,
-      "ne_id": "0804",
-      "nomos": "Φθιώτιδας",
-      "areas": [
-        "Αταλάντης",
-        "Δαφνουσίων"
-      ],
-      "start_date": 1771150920000,
-      "end_date": 1771158120000,
-      "end_date_announced": 1771158600000,
-      "creator": "A.Vergos",
+      "start_date": 1771146000000,
+      "end_date": 1771182000000,
+      "end_date_announced": 1771183800000,
+      "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -81,5 +34,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T11:01:54.928658+00:00"
+  "updated_at": "2026-02-15T11:38:18.750290+00:00"
 }
