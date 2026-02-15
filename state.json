@@ -17,21 +17,23 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24033": {
-      "incident_id": 24033,
+    "7:24035": {
+      "incident_id": 24035,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Δραπετσώνα"
+        "Παλλήνη",
+        "Πικέρμι",
+        "Σπάτα"
       ],
-      "start_date": 1771130280000,
-      "end_date": 1771141080000,
-      "end_date_announced": 1771142400000,
+      "start_date": 1771139880000,
+      "end_date": 1771147080000,
+      "end_date_announced": 1771147800000,
       "creator": "F.Ilia",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T07:09:18.219182+00:00"
+  "updated_at": "2026-02-15T07:51:43.266021+00:00"
 }
