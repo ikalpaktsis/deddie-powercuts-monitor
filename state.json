@@ -1,39 +1,37 @@
 {
   "version": 2,
   "incidents": {
-    "0103:24030": {
-      "incident_id": 24030,
-      "ne_id": "0103",
-      "nomos": "Θάσου",
+    "0703:24034": {
+      "incident_id": 24034,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
       "areas": [
-        "Θεολόγος",
-        "Λιμενάρια",
-        "Ποταμιά"
+        "Βουπρασίας",
+        "Λεχαινών"
       ],
-      "start_date": 1771131900000,
-      "end_date": 1771142700000,
-      "end_date_announced": 1771144200000,
-      "creator": "A.Tzimos",
+      "start_date": 1771137900000,
+      "end_date": 1771145100000,
+      "end_date_announced": 1771146000000,
+      "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24029": {
-      "incident_id": 24029,
+    "7:24033": {
+      "incident_id": 24033,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Άγιοι Απόστολοι Καλάμου",
-        "Βαρνάβας"
+        "Δραπετσώνα"
       ],
-      "start_date": 1771131360000,
-      "end_date": 1771138560000,
-      "end_date_announced": 1771138800000,
+      "start_date": 1771130280000,
+      "end_date": 1771141080000,
+      "end_date_announced": 1771142400000,
       "creator": "F.Ilia",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T06:09:44.840906+00:00"
+  "updated_at": "2026-02-15T07:09:18.219182+00:00"
 }
