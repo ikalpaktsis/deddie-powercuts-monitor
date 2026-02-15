@@ -24,7 +24,7 @@ Monitors the official DEDDIE public REST API for power outages and sends notific
 - The workflow overrides this via `NE_IDS` env with all IDs.
 
 ## Nomos Mapping
-To show the Nomos name in emails, fill `ne_id_map.json` with a map from NE ID to Nomos name.
+To show Nomos name in emails, fill `ne_id_map.json` with a map from NE ID to Nomos name.
 
 Example (placeholder):
 ```json
