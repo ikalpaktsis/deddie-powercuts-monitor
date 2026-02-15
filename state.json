@@ -17,23 +17,21 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24035": {
-      "incident_id": 24035,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0802:24037": {
+      "incident_id": 24037,
+      "ne_id": "0802",
+      "nomos": "Ευβοίας",
       "areas": [
-        "Παλλήνη",
-        "Πικέρμι",
-        "Σπάτα"
+        "Χαλκιδέων"
       ],
-      "start_date": 1771139880000,
-      "end_date": 1771147080000,
-      "end_date_announced": 1771147800000,
-      "creator": "F.Ilia",
+      "start_date": 1771146180000,
+      "end_date": 1771153380000,
+      "end_date_announced": 1771155000000,
+      "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T08:41:31.498126+00:00"
+  "updated_at": "2026-02-15T09:16:04.561128+00:00"
 }
