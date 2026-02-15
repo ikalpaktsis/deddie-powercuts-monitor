@@ -1,37 +1,39 @@
 {
   "version": 2,
   "incidents": {
-    "0703:24034": {
-      "incident_id": 24034,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Βουπρασίας",
-        "Λεχαινών"
-      ],
-      "start_date": 1771137900000,
-      "end_date": 1771148700000,
-      "end_date_announced": 1771149600000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0802:24037": {
-      "incident_id": 24037,
+    "0802:24039": {
+      "incident_id": 24039,
       "ne_id": "0802",
       "nomos": "Ευβοίας",
       "areas": [
         "Χαλκιδέων"
       ],
-      "start_date": 1771146180000,
-      "end_date": 1771153380000,
-      "end_date_announced": 1771155000000,
+      "start_date": 1771148640000,
+      "end_date": 1771155840000,
+      "end_date_announced": 1771156800000,
       "creator": "A.Vergos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24038": {
+      "incident_id": 24038,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Άγιοι Απόστολοι Καλάμου",
+        "Βαρνάβας",
+        "Κάλαμος",
+        "Καπανδρίτι"
+      ],
+      "start_date": 1771147320000,
+      "end_date": 1771154520000,
+      "end_date_announced": 1771155000000,
+      "creator": "F.Ilia",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T09:16:04.561128+00:00"
+  "updated_at": "2026-02-15T09:55:53.862979+00:00"
 }
