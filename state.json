@@ -10,8 +10,8 @@
         "Λεχαινών"
       ],
       "start_date": 1771137900000,
-      "end_date": 1771145100000,
-      "end_date_announced": 1771146000000,
+      "end_date": 1771148700000,
+      "end_date_announced": 1771149600000,
       "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -35,5 +35,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-15T07:51:43.266021+00:00"
+  "updated_at": "2026-02-15T08:41:31.498126+00:00"
 }
