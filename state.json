@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "1004:24052": {
-      "incident_id": 24052,
-      "ne_id": "1004",
-      "nomos": "Λακωνίας",
-      "areas": [
-        "Ανατολικής Μάνης",
-        "Οιτύλου"
-      ],
-      "start_date": 1771185000000,
-      "end_date": 1771199400000,
-      "end_date_announced": 1771200000000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-15T23:43:57.128306+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-16T00:01:46.784910+00:00"
 }
