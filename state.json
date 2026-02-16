@@ -1,22 +1,21 @@
 {
   "version": 2,
   "incidents": {
-    "7:24057": {
-      "incident_id": 24057,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0207:24058": {
+      "incident_id": 24058,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
       "areas": [
-        "Γλυφάδα",
-        "Ελληνικό"
+        "Στάγιρα"
       ],
-      "start_date": 1771239720000,
-      "end_date": 1771246920000,
-      "end_date_announced": 1771248600000,
-      "creator": "kpd",
+      "start_date": 1771240320000,
+      "end_date": 1771251120000,
+      "end_date_announced": 1771252200000,
+      "creator": "A.Tzimos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-16T11:28:51.945594+00:00"
+  "updated_at": "2026-02-16T12:02:50.381562+00:00"
 }
