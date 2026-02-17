@@ -1,54 +1,17 @@
 {
   "version": 2,
   "incidents": {
-    "0403:24064": {
-      "incident_id": 24064,
-      "ne_id": "0403",
-      "nomos": "Ιωάννινων",
-      "areas": [
-        "Εκάλης",
-        "Ζίτσας",
-        "Καλπακίου",
-        "Πασαρώνος",
-        "Περάματος"
-      ],
-      "start_date": 1771306800000,
-      "end_date": 1771317600000,
-      "end_date_announced": 1771318800000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0503:24066": {
-      "incident_id": 24066,
+    "0503:24067": {
+      "incident_id": 24067,
       "ne_id": "0503",
       "nomos": "ΝΕ 0503",
       "areas": [
-        "Φερών"
+        "Κάρλας"
       ],
-      "start_date": 1771313280000,
-      "end_date": 1771320480000,
-      "end_date_announced": 1771320600000,
+      "start_date": 1771315860000,
+      "end_date": 1771323060000,
+      "end_date_announced": 1771324200000,
       "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0703:24063": {
-      "incident_id": 24063,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Αρχαίας Ολυμπίας",
-        "Πύργου",
-        "Φολόης",
-        "Ωλένης"
-      ],
-      "start_date": 1771306500000,
-      "end_date": 1771317300000,
-      "end_date_announced": 1771318800000,
-      "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -68,21 +31,36 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "1:24066": {
-      "incident_id": 24066,
+    "1:24067": {
+      "incident_id": 24067,
       "ne_id": "1",
       "nomos": "Μαγνησίας",
       "areas": [
-        "Φερών"
+        "Κάρλας"
       ],
-      "start_date": 1771313280000,
-      "end_date": 1771320480000,
-      "end_date_announced": 1771320600000,
+      "start_date": 1771315860000,
+      "end_date": 1771323060000,
+      "end_date_announced": 1771324200000,
       "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "1:24068": {
+      "incident_id": 24068,
+      "ne_id": "1",
+      "nomos": "Μαγνησίας",
+      "areas": [
+        "Σκιάθου"
+      ],
+      "start_date": 1771316280000,
+      "end_date": 1771319880000,
+      "end_date_announced": 1771320600000,
+      "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T08:06:29.611202+00:00"
+  "updated_at": "2026-02-17T09:06:24.926901+00:00"
 }
