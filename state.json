@@ -1,6 +1,23 @@
 {
   "version": 2,
   "incidents": {
+    "0206:24084": {
+      "incident_id": 24084,
+      "ne_id": "0206",
+      "nomos": "Σερρών",
+      "areas": [
+        "Λευκώνα",
+        "Μελενικίτσι",
+        "Χριστός"
+      ],
+      "start_date": 1771359960000,
+      "end_date": 1771367160000,
+      "end_date_announced": 1771367400000,
+      "creator": "P.Nianios",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0603:24078": {
       "incident_id": 24078,
       "ne_id": "0603",
@@ -11,8 +28,8 @@
         "Φαιάκων"
       ],
       "start_date": 1771350060000,
-      "end_date": 1771360860000,
-      "end_date_announced": 1771362000000,
+      "end_date": 1771393260000,
+      "end_date_announced": 1771394400000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -49,8 +66,8 @@
         "Οινιάδων"
       ],
       "start_date": 1771353000000,
-      "end_date": 1771363800000,
-      "end_date_announced": 1771365600000,
+      "end_date": 1771389000000,
+      "end_date_announced": 1771390800000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -66,8 +83,8 @@
         "Τραγανού"
       ],
       "start_date": 1771355100000,
-      "end_date": 1771365900000,
-      "end_date_announced": 1771367400000,
+      "end_date": 1771391100000,
+      "end_date_announced": 1771392600000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -84,13 +101,13 @@
         "Πηνείας"
       ],
       "start_date": 1771354200000,
-      "end_date": 1771365000000,
-      "end_date_announced": 1771365600000,
+      "end_date": 1771390200000,
+      "end_date_announced": 1771390800000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T20:20:00.960544+00:00"
+  "updated_at": "2026-02-17T21:04:42.022394+00:00"
 }
