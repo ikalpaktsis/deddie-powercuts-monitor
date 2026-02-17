@@ -16,55 +16,18 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0201:24090": {
-      "incident_id": 24090,
-      "ne_id": "0201",
-      "nomos": "Ημαθίας",
+    "0207:24091": {
+      "incident_id": 24091,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
       "areas": [
-        "Διαβατός",
-        "Κυδωνοχώρι",
-        "Μέση",
-        "Μακροχώρι"
+        "Άγιος Μάμας",
+        "Νέα Μουδανιά",
+        "Νέα Ποτείδαια"
       ],
-      "start_date": 1771366980000,
-      "end_date": 1771377780000,
+      "start_date": 1771370160000,
+      "end_date": 1771377360000,
       "end_date_announced": 1771378200000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0202:24087": {
-      "incident_id": 24087,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Θέρμη",
-        "Λιβαδάκι",
-        "Νέο Ρύσιο",
-        "Νέοι Επιβάτες",
-        "Περαία",
-        "Περιοχή Αεροδρομίου"
-      ],
-      "start_date": 1771359960000,
-      "end_date": 1771370760000,
-      "end_date_announced": 1771371000000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0203:24088": {
-      "incident_id": 24088,
-      "ne_id": "0203",
-      "nomos": "Κιλκίς",
-      "areas": [
-        "Άνω Σούρμενα",
-        "Μουριές"
-      ],
-      "start_date": 1771364220000,
-      "end_date": 1771371420000,
-      "end_date_announced": 1771372800000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -159,22 +122,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "7:24085": {
-      "incident_id": 24085,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Κερατέα"
-      ],
-      "start_date": 1771362420000,
-      "end_date": 1771369620000,
-      "end_date_announced": 1771371000000,
-      "creator": "kpd",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T23:03:50.768828+00:00"
+  "updated_at": "2026-02-17T23:46:37.315086+00:00"
 }
