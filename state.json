@@ -18,6 +18,79 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0605:24083": {
+      "incident_id": 24083,
+      "ne_id": "0605",
+      "nomos": "Λευκάδας",
+      "areas": [
+        "Απολλώνιων",
+        "Καρυάς",
+        "Λευκάδος",
+        "Σφακιωτών"
+      ],
+      "start_date": 1771351200000,
+      "end_date": 1771394400000,
+      "end_date_announced": 1771396200000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0701:24080": {
+      "incident_id": 24080,
+      "ne_id": "0701",
+      "nomos": "Αιτωλοακαρνανίας",
+      "areas": [
+        "Αγγελοκάστρου",
+        "Αγρινίου",
+        "Αιτωλικού",
+        "Αρακύνθου",
+        "Αστακού",
+        "Οινιάδων"
+      ],
+      "start_date": 1771353000000,
+      "end_date": 1771363800000,
+      "end_date_announced": 1771365600000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0703:24081": {
+      "incident_id": 24081,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
+      "areas": [
+        "Αμαλιάδος",
+        "Πηνείας",
+        "Τραγανού"
+      ],
+      "start_date": 1771355100000,
+      "end_date": 1771365900000,
+      "end_date_announced": 1771367400000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0703:24082": {
+      "incident_id": 24082,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
+      "areas": [
+        "Αμαλιάδος",
+        "Βουπρασίας",
+        "Ιορδανού",
+        "Πηνείας"
+      ],
+      "start_date": 1771354200000,
+      "end_date": 1771365000000,
+      "end_date_announced": 1771365600000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "1005:24079": {
       "incident_id": 24079,
       "ne_id": "1005",
@@ -34,5 +107,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T18:37:46.871759+00:00"
+  "updated_at": "2026-02-17T19:37:13.521803+00:00"
 }
