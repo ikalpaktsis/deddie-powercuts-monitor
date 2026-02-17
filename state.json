@@ -50,6 +50,22 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0502:24065": {
+      "incident_id": 24065,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
+      "areas": [
+        "Κοιλάδας",
+        "Λαρισαίων"
+      ],
+      "start_date": 1771311480000,
+      "end_date": 1771318680000,
+      "end_date_announced": 1771318800000,
+      "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0703:24063": {
       "incident_id": 24063,
       "ne_id": "0703",
@@ -84,5 +100,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T06:12:05.600536+00:00"
+  "updated_at": "2026-02-17T07:17:57.692079+00:00"
 }
