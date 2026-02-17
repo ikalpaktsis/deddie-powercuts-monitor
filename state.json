@@ -20,25 +20,9 @@
         "Σφενδάμι"
       ],
       "start_date": 1771327380000,
-      "end_date": 1771345380000,
-      "end_date_announced": 1771345800000,
+      "end_date": 1771352580000,
+      "end_date_announced": 1771353000000,
       "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0403:24074": {
-      "incident_id": 24074,
-      "ne_id": "0403",
-      "nomos": "Ιωάννινων",
-      "areas": [
-        "Δελβινακίου",
-        "Πωγωνιανής"
-      ],
-      "start_date": 1771338600000,
-      "end_date": 1771345800000,
-      "end_date_announced": 1771347600000,
-      "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -60,22 +44,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "1002:24059": {
-      "incident_id": 24059,
-      "ne_id": "1002",
-      "nomos": "Αρκαδίας",
-      "areas": [
-        "Κοντοβαζαίνης"
-      ],
-      "start_date": 1771260000000,
-      "end_date": 1771346400000,
-      "end_date_announced": 1771347600000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T15:30:27.522903+00:00"
+  "updated_at": "2026-02-17T16:40:31.880434+00:00"
 }
