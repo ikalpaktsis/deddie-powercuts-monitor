@@ -1,36 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0201:24062": {
-      "incident_id": 24062,
-      "ne_id": "0201",
-      "nomos": "Ημαθίας",
-      "areas": [
-        "Βέροια"
-      ],
-      "start_date": 1771306860000,
-      "end_date": 1771317660000,
-      "end_date_announced": 1771318800000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0402:24061": {
-      "incident_id": 24061,
-      "ne_id": "0402",
-      "nomos": "Θεσπρωτίας",
-      "areas": [
-        "Φιλιατών"
-      ],
-      "start_date": 1771287600000,
-      "end_date": 1771323600000,
-      "end_date_announced": 1771324200000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0403:24064": {
       "incident_id": 24064,
       "ne_id": "0403",
@@ -50,17 +20,16 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0502:24065": {
-      "incident_id": 24065,
-      "ne_id": "0502",
-      "nomos": "Λάρισας",
+    "0503:24066": {
+      "incident_id": 24066,
+      "ne_id": "0503",
+      "nomos": "ΝΕ 0503",
       "areas": [
-        "Κοιλάδας",
-        "Λαρισαίων"
+        "Φερών"
       ],
-      "start_date": 1771311480000,
-      "end_date": 1771318680000,
-      "end_date_announced": 1771318800000,
+      "start_date": 1771313280000,
+      "end_date": 1771320480000,
+      "end_date_announced": 1771320600000,
       "creator": "G.Fassas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -98,7 +67,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "1:24066": {
+      "incident_id": 24066,
+      "ne_id": "1",
+      "nomos": "Μαγνησίας",
+      "areas": [
+        "Φερών"
+      ],
+      "start_date": 1771313280000,
+      "end_date": 1771320480000,
+      "end_date_announced": 1771320600000,
+      "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T07:17:57.692079+00:00"
+  "updated_at": "2026-02-17T08:06:29.611202+00:00"
 }
