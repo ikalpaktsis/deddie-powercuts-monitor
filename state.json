@@ -1,62 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0205:24073": {
-      "incident_id": 24073,
-      "ne_id": "0205",
-      "nomos": "Πιερίας",
-      "areas": [
-        "Αγαθούπολη",
-        "Αλώνια",
-        "Κίτρος",
-        "Καταχάς",
-        "Κούκκος",
-        "Μακρύγιαλος",
-        "Μεθώνη",
-        "Μηλιά",
-        "Μοσχοχώρι",
-        "Παλαιοστάνη",
-        "Παλιό Ελευθεροχώρι",
-        "Σφενδάμι"
-      ],
-      "start_date": 1771327380000,
-      "end_date": 1771352580000,
-      "end_date_announced": 1771353000000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0603:24075": {
-      "incident_id": 24075,
-      "ne_id": "0603",
-      "nomos": "Κέρκυρας",
-      "areas": [
-        "Εσπερίων"
-      ],
-      "start_date": 1771346100000,
-      "end_date": 1771356900000,
-      "end_date_announced": 1771358400000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0603:24077": {
-      "incident_id": 24077,
-      "ne_id": "0603",
-      "nomos": "Κέρκυρας",
-      "areas": [
-        "Κερκυραίων"
-      ],
-      "start_date": 1771348740000,
-      "end_date": 1771359540000,
-      "end_date_announced": 1771360200000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0603:24078": {
       "incident_id": 24078,
       "ne_id": "0603",
@@ -73,7 +17,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "1005:24079": {
+      "incident_id": 24079,
+      "ne_id": "1005",
+      "nomos": "Μεσσηνίας",
+      "areas": [
+        "Καλαμάτας"
+      ],
+      "start_date": 1771347600000,
+      "end_date": 1771358400000,
+      "end_date_announced": 1771360200000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T17:43:35.151799+00:00"
+  "updated_at": "2026-02-17T18:37:46.871759+00:00"
 }
