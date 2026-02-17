@@ -27,6 +27,22 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0403:24074": {
+      "incident_id": 24074,
+      "ne_id": "0403",
+      "nomos": "Ιωάννινων",
+      "areas": [
+        "Δελβινακίου",
+        "Πωγωνιανής"
+      ],
+      "start_date": 1771338600000,
+      "end_date": 1771345800000,
+      "end_date_announced": 1771347600000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0703:24063": {
       "incident_id": 24063,
       "ne_id": "0703",
@@ -61,5 +77,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T14:29:45.661932+00:00"
+  "updated_at": "2026-02-17T15:30:27.522903+00:00"
 }
