@@ -16,6 +16,24 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0201:24090": {
+      "incident_id": 24090,
+      "ne_id": "0201",
+      "nomos": "Ημαθίας",
+      "areas": [
+        "Διαβατός",
+        "Κυδωνοχώρι",
+        "Μέση",
+        "Μακροχώρι"
+      ],
+      "start_date": 1771366980000,
+      "end_date": 1771377780000,
+      "end_date_announced": 1771378200000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0202:24087": {
       "incident_id": 24087,
       "ne_id": "0202",
@@ -29,8 +47,8 @@
         "Περιοχή Αεροδρομίου"
       ],
       "start_date": 1771359960000,
-      "end_date": 1771367160000,
-      "end_date_announced": 1771367400000,
+      "end_date": 1771370760000,
+      "end_date_announced": 1771371000000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -48,23 +66,6 @@
       "end_date": 1771371420000,
       "end_date_announced": 1771372800000,
       "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0206:24084": {
-      "incident_id": 24084,
-      "ne_id": "0206",
-      "nomos": "Σερρών",
-      "areas": [
-        "Λευκώνα",
-        "Μελενικίτσι",
-        "Χριστός"
-      ],
-      "start_date": 1771359960000,
-      "end_date": 1771367160000,
-      "end_date_announced": 1771367400000,
-      "creator": "P.Nianios",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -175,5 +176,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T21:49:44.369527+00:00"
+  "updated_at": "2026-02-17T22:40:05.998550+00:00"
 }
