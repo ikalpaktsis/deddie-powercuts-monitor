@@ -1,21 +1,43 @@
 {
   "version": 2,
   "incidents": {
-    "0403:24064": {
-      "incident_id": 24064,
-      "ne_id": "0403",
-      "nomos": "Ιωάννινων",
+    "0203:24071": {
+      "incident_id": 24071,
+      "ne_id": "0203",
+      "nomos": "Κιλκίς",
       "areas": [
-        "Εκάλης",
-        "Ζίτσας",
-        "Καλπακίου",
-        "Πασαρώνος",
-        "Περάματος"
+        "Πολύκαστρο"
       ],
-      "start_date": 1771306800000,
-      "end_date": 1771328400000,
-      "end_date_announced": 1771329600000,
-      "creator": "X.Leivadiotis",
+      "start_date": 1771326300000,
+      "end_date": 1771337100000,
+      "end_date_announced": 1771338600000,
+      "creator": "A.Tzimos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0205:24073": {
+      "incident_id": 24073,
+      "ne_id": "0205",
+      "nomos": "Πιερίας",
+      "areas": [
+        "Αγαθούπολη",
+        "Αλώνια",
+        "Κίτρος",
+        "Καταχάς",
+        "Κούκκος",
+        "Μακρύγιαλος",
+        "Μεθώνη",
+        "Μηλιά",
+        "Μοσχοχώρι",
+        "Παλαιοστάνη",
+        "Παλιό Ελευθεροχώρι",
+        "Σφενδάμι"
+      ],
+      "start_date": 1771327380000,
+      "end_date": 1771338180000,
+      "end_date_announced": 1771338600000,
+      "creator": "A.Tzimos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -38,22 +60,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0801:24070": {
-      "incident_id": 24070,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
-      "areas": [
-        "Οινόφυτων",
-        "Σχηματαρίου"
-      ],
-      "start_date": 1771321200000,
-      "end_date": 1771328400000,
-      "end_date_announced": 1771329600000,
-      "creator": "A.Vergos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "1002:24059": {
       "incident_id": 24059,
       "ne_id": "1002",
@@ -68,7 +74,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "1303:24072": {
+      "incident_id": 24072,
+      "ne_id": "1303",
+      "nomos": "Ρεθύμνου",
+      "areas": [
+        "Αγίου Βασιλείου"
+      ],
+      "start_date": 1771327800000,
+      "end_date": 1771331400000,
+      "end_date_announced": 1771333200000,
+      "creator": "S.Karavasilis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T11:08:52.828131+00:00"
+  "updated_at": "2026-02-17T11:56:16.518135+00:00"
 }
