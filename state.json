@@ -1,6 +1,73 @@
 {
   "version": 2,
   "incidents": {
+    "0201:24062": {
+      "incident_id": 24062,
+      "ne_id": "0201",
+      "nomos": "Ημαθίας",
+      "areas": [
+        "Βέροια"
+      ],
+      "start_date": 1771306860000,
+      "end_date": 1771317660000,
+      "end_date_announced": 1771318800000,
+      "creator": "A.Tzimos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0402:24061": {
+      "incident_id": 24061,
+      "ne_id": "0402",
+      "nomos": "Θεσπρωτίας",
+      "areas": [
+        "Φιλιατών"
+      ],
+      "start_date": 1771287600000,
+      "end_date": 1771323600000,
+      "end_date_announced": 1771324200000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0403:24064": {
+      "incident_id": 24064,
+      "ne_id": "0403",
+      "nomos": "Ιωάννινων",
+      "areas": [
+        "Εκάλης",
+        "Ζίτσας",
+        "Καλπακίου",
+        "Πασαρώνος",
+        "Περάματος"
+      ],
+      "start_date": 1771306800000,
+      "end_date": 1771317600000,
+      "end_date_announced": 1771318800000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0703:24063": {
+      "incident_id": 24063,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
+      "areas": [
+        "Αρχαίας Ολυμπίας",
+        "Πύργου",
+        "Φολόης",
+        "Ωλένης"
+      ],
+      "start_date": 1771306500000,
+      "end_date": 1771317300000,
+      "end_date_announced": 1771318800000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "1002:24059": {
       "incident_id": 24059,
       "ne_id": "1002",
@@ -17,5 +84,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T05:10:21.479578+00:00"
+  "updated_at": "2026-02-17T06:12:05.600536+00:00"
 }
