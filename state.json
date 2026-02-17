@@ -20,21 +20,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0503:24067": {
-      "incident_id": 24067,
-      "ne_id": "0503",
-      "nomos": "ΝΕ 0503",
-      "areas": [
-        "Κάρλας"
-      ],
-      "start_date": 1771315860000,
-      "end_date": 1771323060000,
-      "end_date_announced": 1771324200000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0703:24063": {
       "incident_id": 24063,
       "ne_id": "0703",
@@ -83,22 +68,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "1:24067": {
-      "incident_id": 24067,
-      "ne_id": "1",
-      "nomos": "Μαγνησίας",
-      "areas": [
-        "Κάρλας"
-      ],
-      "start_date": 1771315860000,
-      "end_date": 1771323060000,
-      "end_date_announced": 1771324200000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T10:08:08.396071+00:00"
+  "updated_at": "2026-02-17T11:08:52.828131+00:00"
 }
