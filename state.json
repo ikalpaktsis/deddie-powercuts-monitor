@@ -90,22 +90,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "1005:24079": {
-      "incident_id": 24079,
-      "ne_id": "1005",
-      "nomos": "Μεσσηνίας",
-      "areas": [
-        "Καλαμάτας"
-      ],
-      "start_date": 1771347600000,
-      "end_date": 1771358400000,
-      "end_date_announced": 1771360200000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T19:37:13.521803+00:00"
+  "updated_at": "2026-02-17T20:20:00.960544+00:00"
 }
