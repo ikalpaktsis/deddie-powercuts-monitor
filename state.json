@@ -1,6 +1,57 @@
 {
   "version": 2,
   "incidents": {
+    "0201:24086": {
+      "incident_id": 24086,
+      "ne_id": "0201",
+      "nomos": "Ημαθίας",
+      "areas": [
+        "Βέροια"
+      ],
+      "start_date": 1771362300000,
+      "end_date": 1771373100000,
+      "end_date_announced": 1771374600000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0202:24087": {
+      "incident_id": 24087,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Θέρμη",
+        "Λιβαδάκι",
+        "Νέο Ρύσιο",
+        "Νέοι Επιβάτες",
+        "Περαία",
+        "Περιοχή Αεροδρομίου"
+      ],
+      "start_date": 1771359960000,
+      "end_date": 1771367160000,
+      "end_date_announced": 1771367400000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0203:24088": {
+      "incident_id": 24088,
+      "ne_id": "0203",
+      "nomos": "Κιλκίς",
+      "areas": [
+        "Άνω Σούρμενα",
+        "Μουριές"
+      ],
+      "start_date": 1771364220000,
+      "end_date": 1771371420000,
+      "end_date_announced": 1771372800000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0206:24084": {
       "incident_id": 24084,
       "ne_id": "0206",
@@ -107,7 +158,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24085": {
+      "incident_id": 24085,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Κερατέα"
+      ],
+      "start_date": 1771362420000,
+      "end_date": 1771369620000,
+      "end_date_announced": 1771371000000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T21:04:42.022394+00:00"
+  "updated_at": "2026-02-17T21:49:44.369527+00:00"
 }
