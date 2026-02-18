@@ -1,16 +1,37 @@
 {
   "version": 2,
   "incidents": {
-    "0201:24086": {
-      "incident_id": 24086,
-      "ne_id": "0201",
-      "nomos": "Ημαθίας",
+    "0202:24089": {
+      "incident_id": 24089,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
       "areas": [
-        "Βέροια"
+        "Ασβεστοχώρι",
+        "Εξοχή",
+        "Πεύκα",
+        "Πολίχνη",
+        "Φίλυρο"
       ],
-      "start_date": 1771362300000,
-      "end_date": 1771373100000,
-      "end_date_announced": 1771374600000,
+      "start_date": 1771360680000,
+      "end_date": 1771393080000,
+      "end_date_announced": 1771394400000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0202:24099": {
+      "incident_id": 24099,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Δρυμός",
+        "Λητή",
+        "Μελισσοχώρι"
+      ],
+      "start_date": 1771379040000,
+      "end_date": 1771389840000,
+      "end_date_announced": 1771390800000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -26,8 +47,26 @@
         "Νέα Ποτείδαια"
       ],
       "start_date": 1771370160000,
-      "end_date": 1771377360000,
-      "end_date_announced": 1771378200000,
+      "end_date": 1771391760000,
+      "end_date_announced": 1771392600000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0207:24098": {
+      "incident_id": 24098,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
+      "areas": [
+        "Κρυοπηγή",
+        "Πευκοχώρι",
+        "Πολύχρονο",
+        "Χανιώτη"
+      ],
+      "start_date": 1771375500000,
+      "end_date": 1771407900000,
+      "end_date_announced": 1771408800000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -124,5 +163,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-17T23:46:37.315086+00:00"
+  "updated_at": "2026-02-18T02:48:09.846079+00:00"
 }
