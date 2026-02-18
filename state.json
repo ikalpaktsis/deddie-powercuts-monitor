@@ -1,23 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0207:24091": {
-      "incident_id": 24091,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Άγιος Μάμας",
-        "Νέα Μουδανιά",
-        "Νέα Ποτείδαια"
-      ],
-      "start_date": 1771370160000,
-      "end_date": 1771456560000,
-      "end_date_announced": 1771457400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0703:24116": {
       "incident_id": 24116,
       "ne_id": "0703",
@@ -38,5 +21,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T23:14:47.260482+00:00"
+  "updated_at": "2026-02-18T23:48:25.759503+00:00"
 }
