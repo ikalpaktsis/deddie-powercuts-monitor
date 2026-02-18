@@ -19,26 +19,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0202:24096": {
-      "incident_id": 24096,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Διαβατά",
-        "Νεοχωρούδα",
-        "Παλαιόκαστρο",
-        "Πεντάλοφος",
-        "Συμμαχική Οδός",
-        "Συμμαχική οδός"
-      ],
-      "start_date": 1771372860000,
-      "end_date": 1771401660000,
-      "end_date_announced": 1771403400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0202:24099": {
       "incident_id": 24099,
       "ne_id": "0202",
@@ -70,6 +50,27 @@
       "start_date": 1771394340000,
       "end_date": 1771405140000,
       "end_date_announced": 1771405200000,
+      "creator": "A.Tzimos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0206:24108": {
+      "incident_id": 24108,
+      "ne_id": "0206",
+      "nomos": "Σερρών",
+      "areas": [
+        "Βαμβακιά",
+        "Γεφυρούδι",
+        "Καλά Δένδρα",
+        "Καλόκαστρο",
+        "Καμαρωτό",
+        "Νέα Τυρολόη",
+        "Σκοτούσσα"
+      ],
+      "start_date": 1771398720000,
+      "end_date": 1771409520000,
+      "end_date_announced": 1771410600000,
       "creator": "A.Tzimos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -126,22 +127,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "1005:24104": {
-      "incident_id": 24104,
-      "ne_id": "1005",
-      "nomos": "Μεσσηνίας",
-      "areas": [
-        "Πύλου"
-      ],
-      "start_date": 1771365900000,
-      "end_date": 1771401900000,
-      "end_date_announced": 1771403400000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T07:18:55.445766+00:00"
+  "updated_at": "2026-02-18T08:05:29.089500+00:00"
 }
