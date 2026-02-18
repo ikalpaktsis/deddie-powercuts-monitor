@@ -17,7 +17,26 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "0703:24116": {
+      "incident_id": 24116,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
+      "areas": [
+        "Αρχαίας Ολυμπίας",
+        "Πύργου",
+        "Σκιλλούντος",
+        "Φολόης",
+        "Ωλένης"
+      ],
+      "start_date": 1771442400000,
+      "end_date": 1771485600000,
+      "end_date_announced": 1771486200000,
+      "creator": "M.Kalfountzou",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T18:33:48.100486+00:00"
+  "updated_at": "2026-02-18T19:36:39.991993+00:00"
 }
