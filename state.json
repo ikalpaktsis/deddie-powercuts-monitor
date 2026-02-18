@@ -1,25 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0202:24089": {
-      "incident_id": 24089,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Ασβεστοχώρι",
-        "Εξοχή",
-        "Πεύκα",
-        "Πολίχνη",
-        "Φίλυρο"
-      ],
-      "start_date": 1771360680000,
-      "end_date": 1771447080000,
-      "end_date_announced": 1771448400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0207:24091": {
       "incident_id": 24091,
       "ne_id": "0207",
@@ -56,25 +37,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "0701:24115": {
-      "incident_id": 24115,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Αρακύνθου",
-        "Θέρμου",
-        "Μακρυνείας",
-        "Πλατάνου"
-      ],
-      "start_date": 1771418160000,
-      "end_date": 1771428960000,
-      "end_date_announced": 1771430400000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T15:30:58.736399+00:00"
+  "updated_at": "2026-02-18T16:45:00.717835+00:00"
 }
