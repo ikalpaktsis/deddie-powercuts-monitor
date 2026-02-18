@@ -1,25 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0202:24089": {
-      "incident_id": 24089,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Ασβεστοχώρι",
-        "Εξοχή",
-        "Πεύκα",
-        "Πολίχνη",
-        "Φίλυρο"
-      ],
-      "start_date": 1771360680000,
-      "end_date": 1771393080000,
-      "end_date_announced": 1771394400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0202:24095": {
       "incident_id": 24095,
       "ne_id": "0202",
@@ -90,23 +71,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0207:24091": {
-      "incident_id": 24091,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Άγιος Μάμας",
-        "Νέα Μουδανιά",
-        "Νέα Ποτείδαια"
-      ],
-      "start_date": 1771370160000,
-      "end_date": 1771391760000,
-      "end_date_announced": 1771392600000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0207:24098": {
       "incident_id": 24098,
       "ne_id": "0207",
@@ -125,8 +89,8 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0603:24078": {
-      "incident_id": 24078,
+    "0603:24102": {
+      "incident_id": 24102,
       "ne_id": "0603",
       "nomos": "Κέρκυρας",
       "areas": [
@@ -134,49 +98,45 @@
         "Κασσωπαίων",
         "Φαιάκων"
       ],
-      "start_date": 1771350060000,
-      "end_date": 1771393260000,
-      "end_date_announced": 1771394400000,
+      "start_date": 1771376400000,
+      "end_date": 1771412400000,
+      "end_date_announced": 1771414200000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "0605:24083": {
-      "incident_id": 24083,
-      "ne_id": "0605",
-      "nomos": "Λευκάδας",
+    "1005:24104": {
+      "incident_id": 24104,
+      "ne_id": "1005",
+      "nomos": "Μεσσηνίας",
       "areas": [
-        "Απολλώνιων",
-        "Καρυάς",
-        "Λευκάδος",
-        "Σφακιωτών"
+        "Πύλου"
       ],
-      "start_date": 1771351200000,
-      "end_date": 1771394400000,
-      "end_date_announced": 1771396200000,
+      "start_date": 1771365900000,
+      "end_date": 1771401900000,
+      "end_date_announced": 1771403400000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "0703:24081": {
-      "incident_id": 24081,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
+    "2:24103": {
+      "incident_id": 24103,
+      "ne_id": "2",
+      "nomos": "Κεφαλληνίας",
       "areas": [
-        "Αμαλιάδος",
-        "Πηνείας",
-        "Τραγανού"
+        "Αργοστολίου",
+        "Λειβαθούς"
       ],
-      "start_date": 1771355100000,
-      "end_date": 1771391100000,
-      "end_date_announced": 1771392600000,
+      "start_date": 1771362000000,
+      "end_date": 1771398000000,
+      "end_date_announced": 1771399800000,
       "creator": "St.Panagopoulos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T05:00:00.751340+00:00"
+  "updated_at": "2026-02-18T06:11:31.253495+00:00"
 }
