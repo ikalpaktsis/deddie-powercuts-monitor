@@ -1,27 +1,42 @@
 {
   "version": 2,
   "incidents": {
-    "0206:24108": {
-      "incident_id": 24108,
-      "ne_id": "0206",
-      "nomos": "Σερρών",
+    "0202:24089": {
+      "incident_id": 24089,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
       "areas": [
-        "Βαμβακιά",
-        "Γεφυρούδι",
-        "Καλά Δένδρα",
-        "Καλόκαστρο",
-        "Καμαρωτό",
-        "Νέα Τυρολόη",
-        "Σκοτούσσα"
+        "Ασβεστοχώρι",
+        "Εξοχή",
+        "Πεύκα",
+        "Πολίχνη",
+        "Φίλυρο"
       ],
-      "start_date": 1771398720000,
-      "end_date": 1771413120000,
-      "end_date_announced": 1771414200000,
-      "creator": "A.Tzimos",
+      "start_date": 1771360680000,
+      "end_date": 1771447080000,
+      "end_date_announced": 1771448400000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0207:24091": {
+      "incident_id": 24091,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
+      "areas": [
+        "Άγιος Μάμας",
+        "Νέα Μουδανιά",
+        "Νέα Ποτείδαια"
+      ],
+      "start_date": 1771370160000,
+      "end_date": 1771456560000,
+      "end_date_announced": 1771457400000,
+      "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T11:08:27.362833+00:00"
+  "updated_at": "2026-02-18T11:56:13.641447+00:00"
 }
