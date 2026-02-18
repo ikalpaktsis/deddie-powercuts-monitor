@@ -1,60 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0202:24095": {
-      "incident_id": 24095,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Εσωτερική Περιφερειακή",
-        "Ευξεινούπολη",
-        "Εύοσμος",
-        "Νικόπολη"
-      ],
-      "start_date": 1771373820000,
-      "end_date": 1771402620000,
-      "end_date_announced": 1771403400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0202:24099": {
-      "incident_id": 24099,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Δρυμός",
-        "Λητή",
-        "Μελισσοχώρι"
-      ],
-      "start_date": 1771379040000,
-      "end_date": 1771404240000,
-      "end_date_announced": 1771405200000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0202:24107": {
-      "incident_id": 24107,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Ακροπόταμος",
-        "Βαθύλακκος",
-        "Καστανάς",
-        "Παλαιό Αγιονέρι",
-        "Πρόχωμα"
-      ],
-      "start_date": 1771394340000,
-      "end_date": 1771405140000,
-      "end_date_announced": 1771405200000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0206:24108": {
       "incident_id": 24108,
       "ne_id": "0206",
@@ -129,5 +75,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T08:05:29.089500+00:00"
+  "updated_at": "2026-02-18T09:06:11.256072+00:00"
 }
