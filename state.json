@@ -20,6 +20,44 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0202:24095": {
+      "incident_id": 24095,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Εσωτερική Περιφερειακή",
+        "Ευξεινούπολη",
+        "Εύοσμος",
+        "Νικόπολη"
+      ],
+      "start_date": 1771373820000,
+      "end_date": 1771402620000,
+      "end_date_announced": 1771403400000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0202:24096": {
+      "incident_id": 24096,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Διαβατά",
+        "Νεοχωρούδα",
+        "Παλαιόκαστρο",
+        "Πεντάλοφος",
+        "Συμμαχική Οδός",
+        "Συμμαχική οδός"
+      ],
+      "start_date": 1771372860000,
+      "end_date": 1771401660000,
+      "end_date_announced": 1771403400000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "0202:24099": {
       "incident_id": 24099,
       "ne_id": "0202",
@@ -30,8 +68,23 @@
         "Μελισσοχώρι"
       ],
       "start_date": 1771379040000,
-      "end_date": 1771389840000,
-      "end_date_announced": 1771390800000,
+      "end_date": 1771404240000,
+      "end_date_announced": 1771405200000,
+      "creator": "I.Akritidis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0203:24100": {
+      "incident_id": 24100,
+      "ne_id": "0203",
+      "nomos": "Κιλκίς",
+      "areas": [
+        "Αξιούπολη"
+      ],
+      "start_date": 1771381560000,
+      "end_date": 1771395960000,
+      "end_date_announced": 1771396200000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
@@ -107,26 +160,6 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0701:24080": {
-      "incident_id": 24080,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Αγγελοκάστρου",
-        "Αγρινίου",
-        "Αιτωλικού",
-        "Αρακύνθου",
-        "Αστακού",
-        "Οινιάδων"
-      ],
-      "start_date": 1771353000000,
-      "end_date": 1771389000000,
-      "end_date_announced": 1771390800000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0703:24081": {
       "incident_id": 24081,
       "ne_id": "0703",
@@ -143,25 +176,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "0703:24082": {
-      "incident_id": 24082,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Αμαλιάδος",
-        "Βουπρασίας",
-        "Ιορδανού",
-        "Πηνείας"
-      ],
-      "start_date": 1771354200000,
-      "end_date": 1771390200000,
-      "end_date_announced": 1771390800000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T02:48:09.846079+00:00"
+  "updated_at": "2026-02-18T05:00:00.751340+00:00"
 }
