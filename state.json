@@ -56,17 +56,21 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0203:24100": {
-      "incident_id": 24100,
-      "ne_id": "0203",
-      "nomos": "Κιλκίς",
+    "0202:24107": {
+      "incident_id": 24107,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
       "areas": [
-        "Αξιούπολη"
+        "Ακροπόταμος",
+        "Βαθύλακκος",
+        "Καστανάς",
+        "Παλαιό Αγιονέρι",
+        "Πρόχωμα"
       ],
-      "start_date": 1771381560000,
-      "end_date": 1771395960000,
-      "end_date_announced": 1771396200000,
-      "creator": "I.Akritidis",
+      "start_date": 1771394340000,
+      "end_date": 1771405140000,
+      "end_date_announced": 1771405200000,
+      "creator": "A.Tzimos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -106,6 +110,23 @@
       "is_active": true,
       "is_scheduled": false
     },
+    "0603:24105": {
+      "incident_id": 24105,
+      "ne_id": "0603",
+      "nomos": "Κέρκυρας",
+      "areas": [
+        "Θιναλίου",
+        "Κασσωπαίων",
+        "Φαιάκων"
+      ],
+      "start_date": 1771376400000,
+      "end_date": 1771412400000,
+      "end_date_announced": 1771414200000,
+      "creator": "St.Panagopoulos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "1005:24104": {
       "incident_id": 24104,
       "ne_id": "1005",
@@ -120,23 +141,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "2:24103": {
-      "incident_id": 24103,
-      "ne_id": "2",
-      "nomos": "Κεφαλληνίας",
-      "areas": [
-        "Αργοστολίου",
-        "Λειβαθούς"
-      ],
-      "start_date": 1771362000000,
-      "end_date": 1771398000000,
-      "end_date_announced": 1771399800000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T06:11:31.253495+00:00"
+  "updated_at": "2026-02-18T07:18:55.445766+00:00"
 }
