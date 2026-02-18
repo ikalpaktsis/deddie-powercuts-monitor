@@ -17,27 +17,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "0701:24080": {
-      "incident_id": 24080,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Αγγελοκάστρου",
-        "Αγρινίου",
-        "Αιτωλικού",
-        "Αρακύνθου",
-        "Αστακού",
-        "Οινιάδων"
-      ],
-      "start_date": 1771353000000,
-      "end_date": 1771439400000,
-      "end_date_announced": 1771441200000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-18T17:43:23.828394+00:00"
+  "updated_at": "2026-02-18T18:33:48.100486+00:00"
 }
