@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0207:24118": {
-      "incident_id": 24118,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Φούρκα"
-      ],
-      "start_date": 1771488000000,
-      "end_date": 1771495200000,
-      "end_date_announced": 1771497000000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-19T09:05:49.079002+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-19T10:06:55.957215+00:00"
 }
