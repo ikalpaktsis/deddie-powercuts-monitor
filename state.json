@@ -1,5 +1,39 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-20T19:54:55.912842+00:00"
+  "incidents": {
+    "0207:24150": {
+      "incident_id": 24150,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
+      "areas": [
+        "Καλάνδρα",
+        "Σίβηρη",
+        "Φούρκα"
+      ],
+      "start_date": 1771618260000,
+      "end_date": 1771625460000,
+      "end_date_announced": 1771626600000,
+      "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0207:24151": {
+      "incident_id": 24151,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
+      "areas": [
+        "Νέα Ποτείδαια",
+        "Σάνη"
+      ],
+      "start_date": 1771617600000,
+      "end_date": 1771624800000,
+      "end_date_announced": 1771626600000,
+      "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-20T20:41:09.651670+00:00"
 }
