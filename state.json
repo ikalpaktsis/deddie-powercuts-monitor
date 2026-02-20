@@ -18,88 +18,36 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "0702:24143": {
-      "incident_id": 24143,
-      "ne_id": "0702",
-      "nomos": "Αχαΐας",
+    "1005:24144": {
+      "incident_id": 24144,
+      "ne_id": "1005",
+      "nomos": "Μεσσηνίας",
       "areas": [
-        "Αιγίου",
-        "Διακοπτού"
+        "Φιλιατρών"
       ],
-      "start_date": 1771585200000,
-      "end_date": 1771596000000,
-      "end_date_announced": 1771597800000,
+      "start_date": 1771587900000,
+      "end_date": 1771598700000,
+      "end_date_announced": 1771599600000,
       "creator": "s.georgoulas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "0703:24135": {
-      "incident_id": 24135,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
+    "1005:24146": {
+      "incident_id": 24146,
+      "ne_id": "1005",
+      "nomos": "Μεσσηνίας",
       "areas": [
-        "Ανδραβίδας",
-        "Τραγανού"
+        "Φιλιατρών"
       ],
-      "start_date": 1771580400000,
-      "end_date": 1771591200000,
-      "end_date_announced": 1771592400000,
+      "start_date": 1771587900000,
+      "end_date": 1771598700000,
+      "end_date_announced": 1771599600000,
       "creator": "s.georgoulas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0703:24136": {
-      "incident_id": 24136,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Ανδραβίδας",
-        "Γαστούνης",
-        "Λεχαινών"
-      ],
-      "start_date": 1771580400000,
-      "end_date": 1771591200000,
-      "end_date_announced": 1771592400000,
-      "creator": "s.georgoulas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0703:24138": {
-      "incident_id": 24138,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Αμαλιάδος",
-        "Πηνείας",
-        "Τραγανού"
-      ],
-      "start_date": 1771582200000,
-      "end_date": 1771593000000,
-      "end_date_announced": 1771594200000,
-      "creator": "s.georgoulas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "7:24139": {
-      "incident_id": 24139,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Άγιος Στέφανος",
-        "Κιούρκα"
-      ],
-      "start_date": 1771581780000,
-      "end_date": 1771594380000,
-      "end_date_announced": 1771596000000,
-      "creator": "T.Intzempelis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-20T12:02:23.793576+00:00"
+  "updated_at": "2026-02-20T13:34:49.069368+00:00"
 }
