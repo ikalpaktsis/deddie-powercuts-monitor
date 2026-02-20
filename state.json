@@ -1,21 +1,22 @@
 {
   "version": 2,
   "incidents": {
-    "1001:24148": {
-      "incident_id": 24148,
-      "ne_id": "1001",
-      "nomos": "Αργολίδας",
+    "0801:24149": {
+      "incident_id": 24149,
+      "ne_id": "0801",
+      "nomos": "Βοιωτίας",
       "areas": [
-        "Ναυπλίου"
+        "Δαύλειας",
+        "Χαιρώνειας"
       ],
-      "start_date": 1771603260000,
-      "end_date": 1771610460000,
-      "end_date_announced": 1771612200000,
-      "creator": "I.Chatzis",
+      "start_date": 1771609440000,
+      "end_date": 1771616640000,
+      "end_date_announced": 1771617600000,
+      "creator": "D.Diamantis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-20T17:43:39.371245+00:00"
+  "updated_at": "2026-02-20T18:27:07.362321+00:00"
 }
