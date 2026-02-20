@@ -1,36 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "1005:24144": {
-      "incident_id": 24144,
-      "ne_id": "1005",
-      "nomos": "Μεσσηνίας",
-      "areas": [
-        "Φιλιατρών"
-      ],
-      "start_date": 1771587900000,
-      "end_date": 1771598700000,
-      "end_date_announced": 1771599600000,
-      "creator": "s.georgoulas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "1005:24146": {
-      "incident_id": 24146,
-      "ne_id": "1005",
-      "nomos": "Μεσσηνίας",
-      "areas": [
-        "Φιλιατρών"
-      ],
-      "start_date": 1771587900000,
-      "end_date": 1771598700000,
-      "end_date_announced": 1771599600000,
-      "creator": "s.georgoulas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-20T14:28:10.577696+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-20T15:10:44.463455+00:00"
 }
