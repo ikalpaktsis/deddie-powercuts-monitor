@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-20T15:55:35.272266+00:00"
+  "incidents": {
+    "1001:24148": {
+      "incident_id": 24148,
+      "ne_id": "1001",
+      "nomos": "Αργολίδας",
+      "areas": [
+        "Ναυπλίου"
+      ],
+      "start_date": 1771603260000,
+      "end_date": 1771610460000,
+      "end_date_announced": 1771612200000,
+      "creator": "I.Chatzis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-20T16:51:34.852033+00:00"
 }
