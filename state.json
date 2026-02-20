@@ -27,13 +27,13 @@
         "Σάνη"
       ],
       "start_date": 1771617600000,
-      "end_date": 1771628400000,
-      "end_date_announced": 1771630200000,
+      "end_date": 1771632000000,
+      "end_date_announced": 1771633800000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-20T21:59:56.957359+00:00"
+  "updated_at": "2026-02-20T22:41:43.735124+00:00"
 }
