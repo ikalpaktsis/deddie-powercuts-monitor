@@ -25,8 +25,8 @@
         "Δομοκού"
       ],
       "start_date": 1771691820000,
-      "end_date": 1771699020000,
-      "end_date_announced": 1771700400000,
+      "end_date": 1771735020000,
+      "end_date_announced": 1771736400000,
       "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -48,5 +48,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-21T17:13:20.095619+00:00"
+  "updated_at": "2026-02-21T17:45:31.364101+00:00"
 }
