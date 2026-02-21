@@ -1,23 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0207:24150": {
-      "incident_id": 24150,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Καλάνδρα",
-        "Σίβηρη",
-        "Φούρκα"
-      ],
-      "start_date": 1771618260000,
-      "end_date": 1771704660000,
-      "end_date_announced": 1771705800000,
-      "creator": "A.Bellas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0207:24151": {
       "incident_id": 24151,
       "ne_id": "0207",
@@ -33,38 +16,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "0804:24155": {
-      "incident_id": 24155,
-      "ne_id": "0804",
-      "nomos": "Φθιώτιδας",
-      "areas": [
-        "Αμφίκλειας"
-      ],
-      "start_date": 1771672980000,
-      "end_date": 1771680180000,
-      "end_date_announced": 1771680600000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "7:24154": {
-      "incident_id": 24154,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Ζεφύρι",
-        "Μενίδι"
-      ],
-      "start_date": 1771671540000,
-      "end_date": 1771678740000,
-      "end_date_announced": 1771678800000,
-      "creator": "E.Koukoli",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-21T11:56:59.126275+00:00"
+  "updated_at": "2026-02-21T13:07:42.187070+00:00"
 }
