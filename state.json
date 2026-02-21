@@ -11,8 +11,8 @@
         "Φούρκα"
       ],
       "start_date": 1771618260000,
-      "end_date": 1771661460000,
-      "end_date_announced": 1771662600000,
+      "end_date": 1771704660000,
+      "end_date_announced": 1771705800000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -35,5 +35,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-21T06:53:55.041153+00:00"
+  "updated_at": "2026-02-21T07:37:46.594077+00:00"
 }
