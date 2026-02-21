@@ -11,8 +11,8 @@
         "Φούρκα"
       ],
       "start_date": 1771618260000,
-      "end_date": 1771636260000,
-      "end_date_announced": 1771637400000,
+      "end_date": 1771638060000,
+      "end_date_announced": 1771639200000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -27,13 +27,13 @@
         "Σάνη"
       ],
       "start_date": 1771617600000,
-      "end_date": 1771635600000,
-      "end_date_announced": 1771637400000,
+      "end_date": 1771637400000,
+      "end_date_announced": 1771639200000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-20T23:45:23.758249+00:00"
+  "updated_at": "2026-02-21T00:52:30.322691+00:00"
 }
