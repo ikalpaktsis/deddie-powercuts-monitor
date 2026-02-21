@@ -16,7 +16,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24157": {
+      "incident_id": 24157,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Βούλα"
+      ],
+      "start_date": 1771687020000,
+      "end_date": 1771694220000,
+      "end_date_announced": 1771695000000,
+      "creator": "T.Intzempelis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-21T15:36:42.666450+00:00"
+  "updated_at": "2026-02-21T15:59:40.283386+00:00"
 }
