@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-22T21:00:52.699259+00:00"
+  "incidents": {
+    "7:24164": {
+      "incident_id": 24164,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Κάτω Πετράλωνα",
+        "Καλλιθέα"
+      ],
+      "start_date": 1771793640000,
+      "end_date": 1771797240000,
+      "end_date_announced": 1771797600000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-22T21:41:26.175481+00:00"
 }
