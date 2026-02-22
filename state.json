@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24163": {
-      "incident_id": 24163,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Πειραϊκή"
-      ],
-      "start_date": 1771776360000,
-      "end_date": 1771785360000,
-      "end_date_announced": 1771786800000,
-      "creator": "T.Intzempelis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-22T16:46:10.001502+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-22T17:31:57.924914+00:00"
 }
