@@ -1,5 +1,38 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-22T21:59:21.368162+00:00"
+  "incidents": {
+    "5:24165": {
+      "incident_id": 24165,
+      "ne_id": "5",
+      "nomos": "Κυκλάδων",
+      "areas": [
+        "Μήλου"
+      ],
+      "start_date": 1771797000000,
+      "end_date": 1771800600000,
+      "end_date_announced": 1771801200000,
+      "creator": "S.Mavrikakis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24166": {
+      "incident_id": 24166,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Βάρη",
+        "Βάρκιζα",
+        "Βουλιαγμένη"
+      ],
+      "start_date": 1771799040000,
+      "end_date": 1771806240000,
+      "end_date_announced": 1771806600000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-22T22:37:58.618091+00:00"
 }
