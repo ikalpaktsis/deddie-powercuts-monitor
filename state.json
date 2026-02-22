@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0804:24158": {
-      "incident_id": 24158,
-      "ne_id": "0804",
-      "nomos": "Φθιώτιδας",
-      "areas": [
-        "Δομοκού"
-      ],
-      "start_date": 1771691820000,
-      "end_date": 1771735020000,
-      "end_date_announced": 1771736400000,
-      "creator": "A.Vergos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-22T02:56:17.585402+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-22T04:57:18.788059+00:00"
 }
