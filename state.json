@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0603:24169": {
-      "incident_id": 24169,
-      "ne_id": "0603",
-      "nomos": "Κέρκυρας",
-      "areas": [
-        "Θιναλίου",
-        "Κασσωπαίων",
-        "Φαιάκων"
-      ],
-      "start_date": 1771873200000,
-      "end_date": 1771880400000,
-      "end_date_announced": 1771882200000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-23T20:04:46.604449+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-23T21:04:17.986462+00:00"
 }
