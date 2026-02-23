@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24166": {
-      "incident_id": 24166,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Βάρη",
-        "Βάρκιζα",
-        "Βουλιαγμένη"
-      ],
-      "start_date": 1771799040000,
-      "end_date": 1771806240000,
-      "end_date_announced": 1771806600000,
-      "creator": "kpd",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-23T00:00:32.688126+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-23T03:20:56.551970+00:00"
 }
