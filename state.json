@@ -9,13 +9,13 @@
         "Άθυρα"
       ],
       "start_date": 1771951200000,
-      "end_date": 1771972800000,
-      "end_date_announced": 1771974000000,
+      "end_date": 1771978200000,
+      "end_date_announced": 1771979400000,
       "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-24T22:17:47.018557+00:00"
+  "updated_at": "2026-02-24T23:02:00.783609+00:00"
 }
