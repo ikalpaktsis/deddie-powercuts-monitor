@@ -1,42 +1,23 @@
 {
   "version": 2,
   "incidents": {
-    "0202:24170": {
-      "incident_id": 24170,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Άγιος Παύλος",
-        "Μεσημέρι",
-        "Νέα Καλλικράτεια",
-        "Νεοχωράκι"
-      ],
-      "start_date": 1771916400000,
-      "end_date": 1771923600000,
-      "end_date_announced": 1771925400000,
-      "creator": "P.Nianios",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0207:24170": {
-      "incident_id": 24170,
+    "0207:24171": {
+      "incident_id": 24171,
       "ne_id": "0207",
       "nomos": "Χαλκιδικής",
       "areas": [
-        "Άγιος Παύλος",
-        "Μεσημέρι",
-        "Νέα Καλλικράτεια",
-        "Νεοχωράκι"
+        "Αγίας Παρασκευή",
+        "Κρυοπηγή",
+        "Παλιούρι"
       ],
-      "start_date": 1771916400000,
-      "end_date": 1771923600000,
-      "end_date_announced": 1771925400000,
+      "start_date": 1771920780000,
+      "end_date": 1771927980000,
+      "end_date_announced": 1771929000000,
       "creator": "P.Nianios",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-02-24T08:06:31.679401+00:00"
+  "updated_at": "2026-02-24T09:08:39.218597+00:00"
 }
