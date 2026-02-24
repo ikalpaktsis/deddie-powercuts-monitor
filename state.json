@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0202:24173": {
-      "incident_id": 24173,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Άθυρα"
-      ],
-      "start_date": 1771951200000,
-      "end_date": 1771978200000,
-      "end_date_announced": 1771979400000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-24T23:02:00.783609+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-24T23:48:08.313944+00:00"
 }
