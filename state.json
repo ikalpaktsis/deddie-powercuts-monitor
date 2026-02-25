@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0804:24177": {
-      "incident_id": 24177,
-      "ne_id": "0804",
-      "nomos": "Φθιώτιδας",
-      "areas": [
-        "Λαμιέων"
-      ],
-      "start_date": 1772037360000,
-      "end_date": 1772040960000,
-      "end_date_announced": 1772042400000,
-      "creator": "D.Diamantis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-25T16:53:47.020182+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-25T18:04:58.977797+00:00"
 }
