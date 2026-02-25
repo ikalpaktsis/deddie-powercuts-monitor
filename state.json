@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-25T18:04:58.977797+00:00"
+  "incidents": {
+    "7:24178": {
+      "incident_id": 24178,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Δάφνη",
+        "Υμηττός"
+      ],
+      "start_date": 1772045820000,
+      "end_date": 1772051220000,
+      "end_date_announced": 1772051400000,
+      "creator": "E.Koukoli",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-25T19:29:12.318086+00:00"
 }
