@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0207:24184": {
-      "incident_id": 24184,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Μεγάλη Παναγία"
-      ],
-      "start_date": 1772178960000,
-      "end_date": 1772207760000,
-      "end_date_announced": 1772208000000,
-      "creator": "N.Marinis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-27T12:02:32.981690+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-27T13:33:47.468077+00:00"
 }
