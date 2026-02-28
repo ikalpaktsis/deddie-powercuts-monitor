@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24188": {
-      "incident_id": 24188,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Άγιος Στέφανος"
-      ],
-      "start_date": 1772245920000,
-      "end_date": 1772253120000,
-      "end_date_announced": 1772254800000,
-      "creator": "kpd",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-02-28T04:10:16.447218+00:00"
+  "incidents": {},
+  "updated_at": "2026-02-28T05:05:44.579920+00:00"
 }
