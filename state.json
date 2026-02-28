@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-02-28T06:50:29.446553+00:00"
+  "incidents": {
+    "0202:24189": {
+      "incident_id": 24189,
+      "ne_id": "0202",
+      "nomos": "Θεσσαλονίκης",
+      "areas": [
+        "Επανομή"
+      ],
+      "start_date": 1772261100000,
+      "end_date": 1772271900000,
+      "end_date_announced": 1772272800000,
+      "creator": "P.Nianios",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-02-28T07:33:44.341849+00:00"
 }
