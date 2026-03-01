@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0505:24190": {
-      "incident_id": 24190,
-      "ne_id": "0505",
-      "nomos": "Τρικάλων",
-      "areas": [
-        "Οιχαλίας",
-        "Πελινναίων"
-      ],
-      "start_date": 1772341020000,
-      "end_date": 1772348220000,
-      "end_date_announced": 1772348400000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-01T05:00:28.859003+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-01T06:00:39.755521+00:00"
 }
