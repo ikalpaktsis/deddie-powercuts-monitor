@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24195": {
-      "incident_id": 24195,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Λυκόβρυση"
-      ],
-      "start_date": 1772453940000,
-      "end_date": 1772457540000,
-      "end_date_announced": 1772458200000,
-      "creator": "A.Vythoulkas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-02T13:15:29.141686+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-02T14:24:57.473162+00:00"
 }
