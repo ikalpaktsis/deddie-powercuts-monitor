@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-03T12:02:16.215260+00:00"
+  "incidents": {
+    "7:24198": {
+      "incident_id": 24198,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Πεύκη"
+      ],
+      "start_date": 1772542260000,
+      "end_date": 1772547660000,
+      "end_date_announced": 1772548200000,
+      "creator": "A.Vythoulkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-03T13:34:09.575001+00:00"
 }
