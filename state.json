@@ -1,21 +1,36 @@
 {
   "version": 2,
   "incidents": {
-    "7:24198": {
-      "incident_id": 24198,
+    "0804:24200": {
+      "incident_id": 24200,
+      "ne_id": "0804",
+      "nomos": "Φθιώτιδας",
+      "areas": [
+        "Ξυνιάδος"
+      ],
+      "start_date": 1772547120000,
+      "end_date": 1772554320000,
+      "end_date_announced": 1772555400000,
+      "creator": "P.Barkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24199": {
+      "incident_id": 24199,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Πεύκη"
+        "Ελληνοφώνων"
       ],
-      "start_date": 1772542260000,
-      "end_date": 1772547660000,
-      "end_date_announced": 1772548200000,
+      "start_date": 1772545860000,
+      "end_date": 1772551260000,
+      "end_date_announced": 1772551800000,
       "creator": "A.Vythoulkas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-03T13:34:09.575001+00:00"
+  "updated_at": "2026-03-03T14:31:03.325691+00:00"
 }
