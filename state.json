@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "4:24197": {
-      "incident_id": 24197,
-      "ne_id": "4",
-      "nomos": "Λέσβου",
-      "areas": [
-        "Δυτικής Λέσβου"
-      ],
-      "start_date": 1772520000000,
-      "end_date": 1772523600000,
-      "end_date_announced": 1772524800000,
-      "creator": "S.Karavasilis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-03T07:06:55.938805+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-03T07:56:03.654147+00:00"
 }
