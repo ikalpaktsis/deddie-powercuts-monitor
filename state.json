@@ -11,13 +11,13 @@
         "Πλατανάκια"
       ],
       "start_date": 1772609460000,
-      "end_date": 1772627460000,
-      "end_date_announced": 1772629200000,
+      "end_date": 1772634660000,
+      "end_date_announced": 1772636400000,
       "creator": "P.Nianios",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-04T12:00:53.399807+00:00"
+  "updated_at": "2026-03-04T13:32:20.756986+00:00"
 }
