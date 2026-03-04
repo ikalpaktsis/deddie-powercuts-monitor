@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0701:24208": {
-      "incident_id": 24208,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Αγρινίου"
-      ],
-      "start_date": 1772637000000,
-      "end_date": 1772644200000,
-      "end_date_announced": 1772645400000,
-      "creator": "M.Kalfountzou",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-04T15:59:06.609406+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-04T16:59:42.087004+00:00"
 }
