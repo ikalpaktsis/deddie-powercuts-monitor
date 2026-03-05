@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0303:24211": {
-      "incident_id": 24211,
-      "ne_id": "0303",
-      "nomos": "Κοζάνης",
-      "areas": [
-        "Εμπόριο",
-        "Μηλοχώρι"
-      ],
-      "start_date": 1772706600000,
-      "end_date": 1772713800000,
-      "end_date_announced": 1772715600000,
-      "creator": "G.Zanidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-05T11:49:34.328540+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-05T13:16:32.611665+00:00"
 }
