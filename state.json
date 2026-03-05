@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0802:24210": {
-      "incident_id": 24210,
-      "ne_id": "0802",
-      "nomos": "Ευβοίας",
-      "areas": [
-        "Κύμης",
-        "Μαρμαρίου"
-      ],
-      "start_date": 1772694720000,
-      "end_date": 1772701920000,
-      "end_date_announced": 1772703000000,
-      "creator": "G.Fassas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-05T09:08:56.045431+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-05T10:03:14.664159+00:00"
 }
