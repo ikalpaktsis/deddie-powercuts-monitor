@@ -1,21 +1,21 @@
 {
   "version": 2,
   "incidents": {
-    "0501:24215": {
-      "incident_id": 24215,
-      "ne_id": "0501",
-      "nomos": "Καρδίτσας",
+    "0207:24216": {
+      "incident_id": 24216,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
       "areas": [
-        "Σοφάδων"
+        "Αμμουλιανή"
       ],
-      "start_date": 1772775600000,
-      "end_date": 1772782800000,
-      "end_date_announced": 1772784000000,
-      "creator": "P.Barkas",
+      "start_date": 1772779620000,
+      "end_date": 1772786820000,
+      "end_date_announced": 1772787600000,
+      "creator": "P.Nianios",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-06T07:08:48.629116+00:00"
+  "updated_at": "2026-03-06T07:53:38.546615+00:00"
 }
