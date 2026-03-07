@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-07T07:57:56.765248+00:00"
+  "incidents": {
+    "0802:24218": {
+      "incident_id": 24218,
+      "ne_id": "0802",
+      "nomos": "Ευβοίας",
+      "areas": [
+        "Ανθηδώνος"
+      ],
+      "start_date": 1772872500000,
+      "end_date": 1772879700000,
+      "end_date_announced": 1772881200000,
+      "creator": "P.Barkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-07T08:44:07.052482+00:00"
 }
