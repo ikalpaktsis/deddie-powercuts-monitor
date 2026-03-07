@@ -8,14 +8,14 @@
       "areas": [
         "Ανθηδώνος"
       ],
-      "start_date": 1772872500000,
-      "end_date": 1772879700000,
-      "end_date_announced": 1772881200000,
+      "start_date": 1772871240000,
+      "end_date": 1772878440000,
+      "end_date_announced": 1772879400000,
       "creator": "P.Barkas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-07T08:44:07.052482+00:00"
+  "updated_at": "2026-03-07T09:14:55.851309+00:00"
 }
