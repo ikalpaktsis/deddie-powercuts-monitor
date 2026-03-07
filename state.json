@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "1301:24222": {
-      "incident_id": 24222,
-      "ne_id": "1301",
-      "nomos": "Ηρακλείου",
-      "areas": [
-        "Ηρακλείου"
-      ],
-      "start_date": 1772883420000,
-      "end_date": 1772894220000,
-      "end_date_announced": 1772895600000,
-      "creator": "S.Mavrikakis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-07T13:50:08.350527+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-07T14:31:10.153420+00:00"
 }
