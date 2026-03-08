@@ -15,7 +15,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "6:24229": {
+      "incident_id": 24229,
+      "ne_id": "6",
+      "nomos": "Δωδεκανήσου",
+      "areas": [
+        "Καμείρου"
+      ],
+      "start_date": 1772986020000,
+      "end_date": 1772993220000,
+      "end_date_announced": 1772994600000,
+      "creator": "A.Kiatos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-08T16:40:59.071106+00:00"
+  "updated_at": "2026-03-08T17:01:52.631434+00:00"
 }
