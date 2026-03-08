@@ -16,7 +16,37 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24232": {
+      "incident_id": 24232,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Ηλιούπολη"
+      ],
+      "start_date": 1773007080000,
+      "end_date": 1773014280000,
+      "end_date_announced": 1773014400000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24233": {
+      "incident_id": 24233,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Υμηττός"
+      ],
+      "start_date": 1773007260000,
+      "end_date": 1773012660000,
+      "end_date_announced": 1773014400000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-08T21:56:56.981203+00:00"
+  "updated_at": "2026-03-08T22:34:45.235561+00:00"
 }
