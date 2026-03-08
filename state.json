@@ -1,25 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0103:24230": {
-      "incident_id": 24230,
-      "ne_id": "0103",
-      "nomos": "Θάσου",
-      "areas": [
-        "Καλλιράχη",
-        "Λιμενάρια",
-        "Μαριές",
-        "Πρίνος",
-        "Ραχώνι"
-      ],
-      "start_date": 1772989380000,
-      "end_date": 1773000180000,
-      "end_date_announced": 1773001800000,
-      "creator": "A.Tzimos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-08T17:58:54.357711+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-08T18:50:02.540228+00:00"
 }
