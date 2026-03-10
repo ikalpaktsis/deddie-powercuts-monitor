@@ -1,21 +1,22 @@
 {
   "version": 2,
   "incidents": {
-    "5:24240": {
-      "incident_id": 24240,
-      "ne_id": "5",
-      "nomos": "Κυκλάδων",
+    "7:24242": {
+      "incident_id": 24242,
+      "ne_id": "7",
+      "nomos": "Αττικής",
       "areas": [
-        "Μήλου"
+        "Κεφαλάρι",
+        "Κηφισιά"
       ],
-      "start_date": 1773146880000,
-      "end_date": 1773157680000,
-      "end_date_announced": 1773158400000,
-      "creator": "T.Intzempelis",
+      "start_date": 1773157800000,
+      "end_date": 1773163200000,
+      "end_date_announced": 1773163800000,
+      "creator": "F.Ilia",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-10T15:45:08.973089+00:00"
+  "updated_at": "2026-03-10T16:42:10.876502+00:00"
 }
