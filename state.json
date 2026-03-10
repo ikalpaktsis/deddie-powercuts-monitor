@@ -1,5 +1,36 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-10T10:52:13.089578+00:00"
+  "incidents": {
+    "7:24236": {
+      "incident_id": 24236,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Ελευσίνα"
+      ],
+      "start_date": 1773138000000,
+      "end_date": 1773145200000,
+      "end_date_announced": 1773145800000,
+      "creator": "T.Intzempelis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24237": {
+      "incident_id": 24237,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Ελευσίνα"
+      ],
+      "start_date": 1773138000000,
+      "end_date": 1773145200000,
+      "end_date_announced": 1773145800000,
+      "creator": "T.Intzempelis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-10T11:38:48.994275+00:00"
 }
