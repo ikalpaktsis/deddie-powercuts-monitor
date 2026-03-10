@@ -45,7 +45,24 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24241": {
+      "incident_id": 24241,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Νέα Ιωνία",
+        "Νέο Ηράκλειο",
+        "Πεύκη"
+      ],
+      "start_date": 1773149160000,
+      "end_date": 1773154560000,
+      "end_date_announced": 1773154800000,
+      "creator": "F.Ilia",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-10T13:38:58.567012+00:00"
+  "updated_at": "2026-03-10T14:33:46.876949+00:00"
 }
