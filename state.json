@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0703:24245": {
-      "incident_id": 24245,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Αλιφείρας",
-        "Ζαχάρως"
-      ],
-      "start_date": 1773301800000,
-      "end_date": 1773309000000,
-      "end_date_announced": 1773309600000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-12T08:57:09.590426+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-12T09:55:36.335381+00:00"
 }
