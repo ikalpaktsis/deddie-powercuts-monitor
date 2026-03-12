@@ -1,21 +1,23 @@
 {
   "version": 2,
   "incidents": {
-    "0702:24247": {
-      "incident_id": 24247,
-      "ne_id": "0702",
-      "nomos": "Αχαΐας",
+    "0207:24248": {
+      "incident_id": 24248,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
       "areas": [
-        "Καλαβρύτων"
+        "Κασσανδρεία",
+        "Νέα Ποτείδαια",
+        "Νέα Φώκαια"
       ],
-      "start_date": 1773328500000,
-      "end_date": 1773339300000,
-      "end_date_announced": 1773340200000,
-      "creator": "s.georgoulas",
+      "start_date": 1773338040000,
+      "end_date": 1773345240000,
+      "end_date_announced": 1773345600000,
+      "creator": "I.Akritidis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-12T17:37:42.340168+00:00"
+  "updated_at": "2026-03-12T18:34:03.505608+00:00"
 }
