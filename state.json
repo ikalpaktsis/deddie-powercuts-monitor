@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-12T15:34:05.045589+00:00"
+  "incidents": {
+    "0702:24247": {
+      "incident_id": 24247,
+      "ne_id": "0702",
+      "nomos": "Αχαΐας",
+      "areas": [
+        "Καλαβρύτων"
+      ],
+      "start_date": 1773328500000,
+      "end_date": 1773339300000,
+      "end_date_announced": 1773340200000,
+      "creator": "s.georgoulas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-12T16:43:41.050952+00:00"
 }
