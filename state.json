@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-12T06:01:02.770377+00:00"
+  "incidents": {
+    "7:24244": {
+      "incident_id": 24244,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Νέο Φάληρο"
+      ],
+      "start_date": 1773294780000,
+      "end_date": 1773300180000,
+      "end_date_announced": 1773300600000,
+      "creator": "E.Koukoli",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-12T07:14:17.866852+00:00"
 }
