@@ -1,21 +1,22 @@
 {
   "version": 2,
   "incidents": {
-    "7:24244": {
-      "incident_id": 24244,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0703:24245": {
+      "incident_id": 24245,
+      "ne_id": "0703",
+      "nomos": "Ηλείας",
       "areas": [
-        "Νέο Φάληρο"
+        "Αλιφείρας",
+        "Ζαχάρως"
       ],
-      "start_date": 1773294780000,
-      "end_date": 1773300180000,
-      "end_date_announced": 1773300600000,
-      "creator": "E.Koukoli",
+      "start_date": 1773301800000,
+      "end_date": 1773309000000,
+      "end_date_announced": 1773309600000,
+      "creator": "X.Leivadiotis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-12T07:14:17.866852+00:00"
+  "updated_at": "2026-03-12T07:58:49.389042+00:00"
 }
