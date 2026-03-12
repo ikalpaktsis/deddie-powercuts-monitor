@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0207:24248": {
-      "incident_id": 24248,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Κασσανδρεία",
-        "Νέα Ποτείδαια",
-        "Νέα Φώκαια"
-      ],
-      "start_date": 1773338040000,
-      "end_date": 1773345240000,
-      "end_date_announced": 1773345600000,
-      "creator": "I.Akritidis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-12T18:34:03.505608+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-12T19:31:11.027016+00:00"
 }
