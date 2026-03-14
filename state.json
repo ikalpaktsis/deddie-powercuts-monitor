@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-14T22:00:13.826832+00:00"
+  "incidents": {
+    "0505:24257": {
+      "incident_id": 24257,
+      "ne_id": "0505",
+      "nomos": "Τρικάλων",
+      "areas": [
+        "Εστιαιώτιδας"
+      ],
+      "start_date": 1773527400000,
+      "end_date": 1773534600000,
+      "end_date_announced": 1773536400000,
+      "creator": "G.Fassas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-14T22:40:24.083149+00:00"
 }
