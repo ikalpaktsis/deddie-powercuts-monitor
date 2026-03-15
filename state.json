@@ -1,74 +1,22 @@
 {
   "version": 2,
   "incidents": {
-    "0801:24261": {
-      "incident_id": 24261,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
+    "7:24265": {
+      "incident_id": 24265,
+      "ne_id": "7",
+      "nomos": "Αττικής",
       "areas": [
-        "Λεβαδέων",
-        "Ορχομενού",
-        "Χαιρώνειας"
+        "Άνω Λιόσια",
+        "Καματερό"
       ],
-      "start_date": 1773573480000,
-      "end_date": 1773580680000,
-      "end_date_announced": 1773581400000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0801:24262": {
-      "incident_id": 24262,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
-      "areas": [
-        "Λεβαδέων",
-        "Ορχομενού",
-        "Χαιρώνειας"
-      ],
-      "start_date": 1773573840000,
-      "end_date": 1773581040000,
-      "end_date_announced": 1773581400000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0801:24263": {
-      "incident_id": 24263,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
-      "areas": [
-        "Λεβαδέων",
-        "Ορχομενού",
-        "Χαιρώνειας"
-      ],
-      "start_date": 1773574020000,
-      "end_date": 1773581220000,
-      "end_date_announced": 1773581400000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0801:24264": {
-      "incident_id": 24264,
-      "ne_id": "0801",
-      "nomos": "Βοιωτίας",
-      "areas": [
-        "Λεβαδέων",
-        "Ορχομενού",
-        "Χαιρώνειας"
-      ],
-      "start_date": 1773574080000,
-      "end_date": 1773581280000,
-      "end_date_announced": 1773581400000,
-      "creator": "G.Fassas",
+      "start_date": 1773579420000,
+      "end_date": 1773584820000,
+      "end_date_announced": 1773585000000,
+      "creator": "E.Koukoli",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-15T13:14:01.550600+00:00"
+  "updated_at": "2026-03-15T13:58:12.302219+00:00"
 }
