@@ -1,39 +1,36 @@
 {
   "version": 2,
   "incidents": {
-    "7:24271": {
-      "incident_id": 24271,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0804:24273": {
+      "incident_id": 24273,
+      "ne_id": "0804",
+      "nomos": "Φθιώτιδας",
       "areas": [
-        "Βάρη",
-        "Βουλιαγμένη",
-        "Βούλα",
-        "Καβούρι"
+        "Λαμιέων"
       ],
-      "start_date": 1773676980000,
-      "end_date": 1773684180000,
-      "end_date_announced": 1773685800000,
-      "creator": "E.Koukoli",
+      "start_date": 1773686820000,
+      "end_date": 1773690420000,
+      "end_date_announced": 1773691200000,
+      "creator": "A.Arvanitis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24272": {
-      "incident_id": 24272,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0804:24274": {
+      "incident_id": 24274,
+      "ne_id": "0804",
+      "nomos": "Φθιώτιδας",
       "areas": [
-        "Αμπελόκηποι"
+        "Λαμιέων"
       ],
-      "start_date": 1773678660000,
-      "end_date": 1773684060000,
-      "end_date_announced": 1773685800000,
-      "creator": "E.Koukoli",
+      "start_date": 1773686880000,
+      "end_date": 1773690480000,
+      "end_date_announced": 1773691200000,
+      "creator": "A.Arvanitis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-16T17:46:19.156522+00:00"
+  "updated_at": "2026-03-16T19:14:19.448778+00:00"
 }
