@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0605:24267": {
-      "incident_id": 24267,
-      "ne_id": "0605",
-      "nomos": "Λευκάδας",
-      "areas": [
-        "Λευκάδος"
-      ],
-      "start_date": 1773590400000,
-      "end_date": 1773633600000,
-      "end_date_announced": 1773635400000,
-      "creator": "St.Panagopoulos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-16T03:36:17.863477+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-16T05:33:41.895041+00:00"
 }
