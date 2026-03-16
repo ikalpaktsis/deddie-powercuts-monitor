@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24269": {
-      "incident_id": 24269,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Περιστέρι",
-        "Χαϊδάρι"
-      ],
-      "start_date": 1773650460000,
-      "end_date": 1773657660000,
-      "end_date_announced": 1773658800000,
-      "creator": "G.Neakis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-16T09:42:08.761182+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-16T10:40:17.468973+00:00"
 }
