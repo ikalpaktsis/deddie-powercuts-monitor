@@ -1,5 +1,24 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-16T15:20:24.176024+00:00"
+  "incidents": {
+    "7:24271": {
+      "incident_id": 24271,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Βάρη",
+        "Βουλιαγμένη",
+        "Βούλα",
+        "Καβούρι"
+      ],
+      "start_date": 1773676980000,
+      "end_date": 1773684180000,
+      "end_date_announced": 1773685800000,
+      "creator": "E.Koukoli",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-16T16:38:57.161639+00:00"
 }
