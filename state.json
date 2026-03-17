@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-17T09:09:18.840338+00:00"
+  "incidents": {
+    "7:24275": {
+      "incident_id": 24275,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Άνω Γλυφάδα",
+        "Αργυρούπολη"
+      ],
+      "start_date": 1773737760000,
+      "end_date": 1773744960000,
+      "end_date_announced": 1773745200000,
+      "creator": "D.Petrounias",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-17T10:10:07.517623+00:00"
 }
