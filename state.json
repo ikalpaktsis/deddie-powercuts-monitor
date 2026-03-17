@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24277": {
-      "incident_id": 24277,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Αιγάλεω"
-      ],
-      "start_date": 1773785220000,
-      "end_date": 1773788820000,
-      "end_date_announced": 1773790200000,
-      "creator": "kpd",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-17T22:41:17.989117+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-17T23:17:17.895502+00:00"
 }
