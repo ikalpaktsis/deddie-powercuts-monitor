@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24276": {
-      "incident_id": 24276,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Κυψέλη"
-      ],
-      "start_date": 1773742500000,
-      "end_date": 1773749700000,
-      "end_date_announced": 1773750600000,
-      "creator": "D.Petrounias",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-17T11:57:19.280162+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-17T13:45:11.298747+00:00"
 }
