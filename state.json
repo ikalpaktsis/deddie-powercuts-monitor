@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24286": {
-      "incident_id": 24286,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Εξάρχεια",
-        "Ομόνοια"
-      ],
-      "start_date": 1773852840000,
-      "end_date": 1773860040000,
-      "end_date_announced": 1773860400000,
-      "creator": "T.Intzempelis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-18T17:47:50.675788+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-18T19:12:32.100241+00:00"
 }
