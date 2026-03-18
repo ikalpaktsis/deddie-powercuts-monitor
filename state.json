@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-18T22:16:46.332290+00:00"
+  "incidents": {
+    "7:24287": {
+      "incident_id": 24287,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Νέα Σμύρνη",
+        "Νέος Κόσμος"
+      ],
+      "start_date": 1773873180000,
+      "end_date": 1773880380000,
+      "end_date_announced": 1773882000000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-18T22:58:21.080015+00:00"
 }
