@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-18T09:37:49.672215+00:00"
+  "incidents": {
+    "7:24283": {
+      "incident_id": 24283,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Κερατέα"
+      ],
+      "start_date": 1773828180000,
+      "end_date": 1773835380000,
+      "end_date_announced": 1773837000000,
+      "creator": "D.Petrounias",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-18T10:37:12.306966+00:00"
 }
