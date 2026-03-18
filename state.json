@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-18T12:36:20.329079+00:00"
+  "incidents": {
+    "0801:24284": {
+      "incident_id": 24284,
+      "ne_id": "0801",
+      "nomos": "Βοιωτίας",
+      "areas": [
+        "Αλιάρτου",
+        "Θηβαίων"
+      ],
+      "start_date": 1773841920000,
+      "end_date": 1773849120000,
+      "end_date_announced": 1773849600000,
+      "creator": "A.Arvanitis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-18T14:08:41.671633+00:00"
 }
