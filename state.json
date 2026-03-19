@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "7:24294": {
-      "incident_id": 24294,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Γαλάτσι",
-        "Ριζούπολη"
-      ],
-      "start_date": 1773900960000,
-      "end_date": 1773908160000,
-      "end_date_announced": 1773909000000,
-      "creator": "G.Neakis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-19T08:04:13.121145+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-19T09:03:10.567263+00:00"
 }
