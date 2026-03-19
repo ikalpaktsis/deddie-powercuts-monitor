@@ -1,5 +1,37 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-19T21:49:30.355377+00:00"
+  "incidents": {
+    "7:24297": {
+      "incident_id": 24297,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Αγία Μαρίνα",
+        "Κορωπί"
+      ],
+      "start_date": 1773957780000,
+      "end_date": 1773964980000,
+      "end_date_announced": 1773966600000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24298": {
+      "incident_id": 24298,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Μαρκόπουλο"
+      ],
+      "start_date": 1773958260000,
+      "end_date": 1773965460000,
+      "end_date_announced": 1773966600000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-19T22:36:24.638387+00:00"
 }
