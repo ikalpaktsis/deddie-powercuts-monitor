@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-19T00:00:38.711271+00:00"
+  "incidents": {
+    "7:24289": {
+      "incident_id": 24289,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Θησείο"
+      ],
+      "start_date": 1773887040000,
+      "end_date": 1773892440000,
+      "end_date_announced": 1773892800000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-19T03:22:19.546517+00:00"
 }
