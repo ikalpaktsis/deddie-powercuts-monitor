@@ -1,6 +1,21 @@
 {
   "version": 2,
   "incidents": {
+    "0207:24299": {
+      "incident_id": 24299,
+      "ne_id": "0207",
+      "nomos": "Χαλκιδικής",
+      "areas": [
+        "Πευκοχώρι"
+      ],
+      "start_date": 1773959520000,
+      "end_date": 1773966720000,
+      "end_date_announced": 1773968400000,
+      "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "7:24297": {
       "incident_id": 24297,
       "ne_id": "7",
@@ -33,5 +48,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-19T23:04:18.123826+00:00"
+  "updated_at": "2026-03-19T23:46:19.746069+00:00"
 }
