@@ -1,21 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0503:24291": {
-      "incident_id": 24291,
-      "ne_id": "0503",
-      "nomos": "ΝΕ 0503",
-      "areas": [
-        "Αλμυρού"
-      ],
-      "start_date": 1773894900000,
-      "end_date": 1773902100000,
-      "end_date_announced": 1773903600000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0804:24290": {
       "incident_id": 24290,
       "ne_id": "0804",
@@ -27,37 +12,6 @@
       "end_date": 1773904980000,
       "end_date_announced": 1773905400000,
       "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "1:24291": {
-      "incident_id": 24291,
-      "ne_id": "1",
-      "nomos": "Μαγνησίας",
-      "areas": [
-        "Αλμυρού"
-      ],
-      "start_date": 1773894900000,
-      "end_date": 1773902100000,
-      "end_date_announced": 1773903600000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "7:24292": {
-      "incident_id": 24292,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Παλλήνη",
-        "Πεντέλη"
-      ],
-      "start_date": 1773894780000,
-      "end_date": 1773901980000,
-      "end_date_announced": 1773903600000,
-      "creator": "G.Neakis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -77,7 +31,23 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24294": {
+      "incident_id": 24294,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Γαλάτσι",
+        "Ριζούπολη"
+      ],
+      "start_date": 1773900960000,
+      "end_date": 1773908160000,
+      "end_date_announced": 1773909000000,
+      "creator": "G.Neakis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-19T06:12:51.058611+00:00"
+  "updated_at": "2026-03-19T07:17:33.241082+00:00"
 }
