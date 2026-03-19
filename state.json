@@ -1,37 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0804:24290": {
-      "incident_id": 24290,
-      "ne_id": "0804",
-      "nomos": "Φθιώτιδας",
-      "areas": [
-        "Δομοκού"
-      ],
-      "start_date": 1773890580000,
-      "end_date": 1773904980000,
-      "end_date_announced": 1773905400000,
-      "creator": "A.Arvanitis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "7:24293": {
-      "incident_id": 24293,
-      "ne_id": "7",
-      "nomos": "Αττικής",
-      "areas": [
-        "Ντράφι",
-        "Παλλήνη"
-      ],
-      "start_date": 1773898380000,
-      "end_date": 1773905580000,
-      "end_date_announced": 1773907200000,
-      "creator": "G.Neakis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "7:24294": {
       "incident_id": 24294,
       "ne_id": "7",
@@ -49,5 +18,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-19T07:17:33.241082+00:00"
+  "updated_at": "2026-03-19T08:04:13.121145+00:00"
 }
