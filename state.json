@@ -9,8 +9,8 @@
         "Βόλου"
       ],
       "start_date": 1773943740000,
-      "end_date": 1773950940000,
-      "end_date_announced": 1773952200000,
+      "end_date": 1773954540000,
+      "end_date_announced": 1773955800000,
       "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
@@ -24,13 +24,13 @@
         "Βόλου"
       ],
       "start_date": 1773943740000,
-      "end_date": 1773950940000,
-      "end_date_announced": 1773952200000,
+      "end_date": 1773954540000,
+      "end_date_announced": 1773955800000,
       "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-19T19:36:54.058484+00:00"
+  "updated_at": "2026-03-19T20:20:46.477480+00:00"
 }
