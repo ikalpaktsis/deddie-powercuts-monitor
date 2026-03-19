@@ -1,23 +1,36 @@
 {
   "version": 2,
   "incidents": {
-    "7:24295": {
-      "incident_id": 24295,
-      "ne_id": "7",
-      "nomos": "Αττικής",
+    "0503:24296": {
+      "incident_id": 24296,
+      "ne_id": "0503",
+      "nomos": "ΝΕ 0503",
       "areas": [
-        "Κηφισιά",
-        "Νέα Ερυθραία",
-        "Νέα Κηφισιά"
+        "Βόλου"
       ],
-      "start_date": 1773938160000,
-      "end_date": 1773943560000,
-      "end_date_announced": 1773945000000,
-      "creator": "E.Koukoli",
+      "start_date": 1773943740000,
+      "end_date": 1773950940000,
+      "end_date_announced": 1773952200000,
+      "creator": "A.Vergos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "1:24296": {
+      "incident_id": 24296,
+      "ne_id": "1",
+      "nomos": "Μαγνησίας",
+      "areas": [
+        "Βόλου"
+      ],
+      "start_date": 1773943740000,
+      "end_date": 1773950940000,
+      "end_date_announced": 1773952200000,
+      "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-19T17:43:58.472694+00:00"
+  "updated_at": "2026-03-19T18:36:35.611983+00:00"
 }
