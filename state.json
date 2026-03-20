@@ -16,21 +16,21 @@
       "is_active": true,
       "is_scheduled": false
     },
-    "1304:24301": {
-      "incident_id": 24301,
-      "ne_id": "1304",
-      "nomos": "Χανίων",
+    "0502:24302": {
+      "incident_id": 24302,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
       "areas": [
-        "Χανίων"
+        "Γιαννούλης"
       ],
-      "start_date": 1773983520000,
-      "end_date": 1773990720000,
-      "end_date_announced": 1773991800000,
-      "creator": "S.Karavasilis",
+      "start_date": 1773989400000,
+      "end_date": 1773996600000,
+      "end_date_announced": 1773997200000,
+      "creator": "S.Barkas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-20T06:36:31.890702+00:00"
+  "updated_at": "2026-03-20T07:36:18.341558+00:00"
 }
