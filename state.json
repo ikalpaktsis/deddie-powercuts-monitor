@@ -1,22 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0403:24307": {
-      "incident_id": 24307,
-      "ne_id": "0403",
-      "nomos": "Ιωάννινων",
-      "areas": [
-        "Ανατολής",
-        "Ιωαννιτών"
-      ],
-      "start_date": 1774027800000,
-      "end_date": 1774042200000,
-      "end_date_announced": 1774044000000,
-      "creator": "I.Chatzis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-20T18:59:57.623168+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-20T19:44:17.769088+00:00"
 }
