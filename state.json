@@ -15,7 +15,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "1304:24301": {
+      "incident_id": 24301,
+      "ne_id": "1304",
+      "nomos": "Χανίων",
+      "areas": [
+        "Χανίων"
+      ],
+      "start_date": 1773983520000,
+      "end_date": 1773990720000,
+      "end_date_announced": 1773991800000,
+      "creator": "S.Karavasilis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-20T05:37:56.289620+00:00"
+  "updated_at": "2026-03-20T06:36:31.890702+00:00"
 }
