@@ -15,22 +15,7 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
-    },
-    "0502:24302": {
-      "incident_id": 24302,
-      "ne_id": "0502",
-      "nomos": "Λάρισας",
-      "areas": [
-        "Γιαννούλης"
-      ],
-      "start_date": 1773989400000,
-      "end_date": 1773996600000,
-      "end_date_announced": 1773997200000,
-      "creator": "S.Barkas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-20T07:36:18.341558+00:00"
+  "updated_at": "2026-03-20T08:24:09.921033+00:00"
 }
