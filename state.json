@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-21T11:38:33.258554+00:00"
+  "incidents": {
+    "0204:24312": {
+      "incident_id": 24312,
+      "ne_id": "0204",
+      "nomos": "Πέλλας",
+      "areas": [
+        "Έδεσσα"
+      ],
+      "start_date": 1774093140000,
+      "end_date": 1774100340000,
+      "end_date_announced": 1774101600000,
+      "creator": "A.Stanitsas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-21T11:57:40.426599+00:00"
 }
