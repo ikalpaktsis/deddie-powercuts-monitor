@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-21T05:28:35.171410+00:00"
+  "incidents": {
+    "0802:24311": {
+      "incident_id": 24311,
+      "ne_id": "0802",
+      "nomos": "Ευβοίας",
+      "areas": [
+        "Διρφύων-Μεσσαπιών",
+        "Κύμης-Αλιβερίου"
+      ],
+      "start_date": 1774071180000,
+      "end_date": 1774078380000,
+      "end_date_announced": 1774080000000,
+      "creator": "S.Barkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-21T06:04:53.062067+00:00"
 }
