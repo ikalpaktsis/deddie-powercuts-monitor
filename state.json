@@ -1,23 +1,38 @@
 {
   "version": 2,
   "incidents": {
-    "7:24314": {
-      "incident_id": 24314,
+    "4:24316": {
+      "incident_id": 24316,
+      "ne_id": "4",
+      "nomos": "Λέσβου",
+      "areas": [
+        "Μυτιλήνης"
+      ],
+      "start_date": 1774160460000,
+      "end_date": 1774164060000,
+      "end_date_announced": 1774164600000,
+      "creator": "I.Gialelis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24315": {
+      "incident_id": 24315,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Γέρακας",
-        "Κάντζα",
-        "Παλλήνη"
+        "Βύρωνας",
+        "Καισαριανή",
+        "Παγκράτι"
       ],
-      "start_date": 1774152540000,
-      "end_date": 1774159740000,
-      "end_date_announced": 1774161000000,
-      "creator": "kpd",
+      "start_date": 1774158900000,
+      "end_date": 1774166100000,
+      "end_date_announced": 1774166400000,
+      "creator": "G.Neakis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-22T06:07:41.991691+00:00"
+  "updated_at": "2026-03-22T07:10:03.855599+00:00"
 }
