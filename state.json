@@ -9,13 +9,13 @@
         "Πευκοχώρι"
       ],
       "start_date": 1774213860000,
-      "end_date": 1774221060000,
-      "end_date_announced": 1774222200000,
+      "end_date": 1774224660000,
+      "end_date_announced": 1774225800000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-22T22:00:04.823319+00:00"
+  "updated_at": "2026-03-22T22:39:17.468101+00:00"
 }
