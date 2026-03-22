@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-22T13:11:22.299132+00:00"
+  "incidents": {
+    "0802:24320": {
+      "incident_id": 24320,
+      "ne_id": "0802",
+      "nomos": "Ευβοίας",
+      "areas": [
+        "Χαλκιδέων"
+      ],
+      "start_date": 1774186560000,
+      "end_date": 1774190160000,
+      "end_date_announced": 1774191600000,
+      "creator": "S.Barkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-22T13:54:01.427749+00:00"
 }
