@@ -1,36 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0503:24322": {
-      "incident_id": 24322,
-      "ne_id": "0503",
-      "nomos": "ΝΕ 0503",
-      "areas": [
-        "Φερών"
-      ],
-      "start_date": 1774262760000,
-      "end_date": 1774266360000,
-      "end_date_announced": 1774267200000,
-      "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "1:24322": {
-      "incident_id": 24322,
-      "ne_id": "1",
-      "nomos": "Μαγνησίας",
-      "areas": [
-        "Φερών"
-      ],
-      "start_date": 1774262760000,
-      "end_date": 1774266360000,
-      "end_date_announced": 1774267200000,
-      "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-23T11:12:22.455278+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-23T11:56:30.931157+00:00"
 }
