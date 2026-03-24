@@ -9,8 +9,8 @@
         "Δρύμη"
       ],
       "start_date": 1774386240000,
-      "end_date": 1774393440000,
-      "end_date_announced": 1774395000000,
+      "end_date": 1774397040000,
+      "end_date_announced": 1774398600000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -33,7 +33,23 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "7:24337": {
+      "incident_id": 24337,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Ασπρόπυργος",
+        "Ελευσίνα"
+      ],
+      "start_date": 1774388820000,
+      "end_date": 1774394220000,
+      "end_date_announced": 1774395000000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T21:54:13.730640+00:00"
+  "updated_at": "2026-03-24T22:39:27.397661+00:00"
 }
