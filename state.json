@@ -1,46 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0202:24323": {
-      "incident_id": 24323,
-      "ne_id": "0202",
-      "nomos": "Θεσσαλονίκης",
-      "areas": [
-        "Άγιος Παύλος",
-        "Μεσημέρι",
-        "Νέα Ηράκλεια",
-        "Νέα Καλλικράτεια",
-        "Νεοχωράκι",
-        "Σχολάρι"
-      ],
-      "start_date": 1774313040000,
-      "end_date": 1774349040000,
-      "end_date_announced": 1774350000000,
-      "creator": "A.Bellas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0207:24323": {
-      "incident_id": 24323,
-      "ne_id": "0207",
-      "nomos": "Χαλκιδικής",
-      "areas": [
-        "Άγιος Παύλος",
-        "Μεσημέρι",
-        "Νέα Ηράκλεια",
-        "Νέα Καλλικράτεια",
-        "Νεοχωράκι",
-        "Σχολάρι"
-      ],
-      "start_date": 1774313040000,
-      "end_date": 1774349040000,
-      "end_date_announced": 1774350000000,
-      "creator": "A.Bellas",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0503:24330": {
       "incident_id": 24330,
       "ne_id": "0503",
@@ -52,22 +12,6 @@
       "end_date": 1774352340000,
       "end_date_announced": 1774353600000,
       "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0802:24331": {
-      "incident_id": 24331,
-      "ne_id": "0802",
-      "nomos": "Ευβοίας",
-      "areas": [
-        "Διρφύων-Μεσσαπιών",
-        "Μαντουδίου-Λίμνης-Αγίας Άννας"
-      ],
-      "start_date": 1774345500000,
-      "end_date": 1774349100000,
-      "end_date_announced": 1774350000000,
-      "creator": "S.Barkas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -86,7 +30,22 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "5:24333": {
+      "incident_id": 24333,
+      "ne_id": "5",
+      "nomos": "Κυκλάδων",
+      "areas": [
+        "Σερίφου"
+      ],
+      "start_date": 1774347600000,
+      "end_date": 1774354800000,
+      "end_date_announced": 1774355400000,
+      "creator": "D.Petrounias",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T10:36:29.455967+00:00"
+  "updated_at": "2026-03-24T11:33:50.779470+00:00"
 }
