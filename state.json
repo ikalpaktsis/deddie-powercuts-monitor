@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-24T17:42:48.429281+00:00"
+  "incidents": {
+    "7:24334": {
+      "incident_id": 24334,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Λαύριο"
+      ],
+      "start_date": 1774374120000,
+      "end_date": 1774379520000,
+      "end_date_announced": 1774380600000,
+      "creator": "E.Christaki",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-24T18:42:06.610108+00:00"
 }
