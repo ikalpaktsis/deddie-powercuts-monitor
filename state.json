@@ -40,7 +40,53 @@
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
+    },
+    "0503:24330": {
+      "incident_id": 24330,
+      "ne_id": "0503",
+      "nomos": "ΝΕ 0503",
+      "areas": [
+        "Φερών"
+      ],
+      "start_date": 1774345140000,
+      "end_date": 1774352340000,
+      "end_date_announced": 1774353600000,
+      "creator": "m.betsos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0802:24331": {
+      "incident_id": 24331,
+      "ne_id": "0802",
+      "nomos": "Ευβοίας",
+      "areas": [
+        "Διρφύων-Μεσσαπιών",
+        "Μαντουδίου-Λίμνης-Αγίας Άννας"
+      ],
+      "start_date": 1774345500000,
+      "end_date": 1774349100000,
+      "end_date_announced": 1774350000000,
+      "creator": "S.Barkas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "1:24330": {
+      "incident_id": 24330,
+      "ne_id": "1",
+      "nomos": "Μαγνησίας",
+      "areas": [
+        "Φερών"
+      ],
+      "start_date": 1774345140000,
+      "end_date": 1774352340000,
+      "end_date_announced": 1774353600000,
+      "creator": "m.betsos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T09:40:37.835565+00:00"
+  "updated_at": "2026-03-24T10:36:29.455967+00:00"
 }
