@@ -14,8 +14,8 @@
         "Σχολάρι"
       ],
       "start_date": 1774313040000,
-      "end_date": 1774331040000,
-      "end_date_announced": 1774332000000,
+      "end_date": 1774349040000,
+      "end_date_announced": 1774350000000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -29,8 +29,8 @@
         "Λιτόχωρο"
       ],
       "start_date": 1774322160000,
-      "end_date": 1774331160000,
-      "end_date_announced": 1774332000000,
+      "end_date": 1774340160000,
+      "end_date_announced": 1774341000000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -49,9 +49,24 @@
         "Σχολάρι"
       ],
       "start_date": 1774313040000,
-      "end_date": 1774331040000,
-      "end_date_announced": 1774332000000,
+      "end_date": 1774349040000,
+      "end_date_announced": 1774350000000,
       "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0502:24327": {
+      "incident_id": 24327,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
+      "areas": [
+        "Πλατυκάμπου"
+      ],
+      "start_date": 1774330260000,
+      "end_date": 1774337460000,
+      "end_date_announced": 1774339200000,
+      "creator": "m.betsos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
@@ -87,5 +102,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T05:00:07.820994+00:00"
+  "updated_at": "2026-03-24T06:09:52.642511+00:00"
 }
