@@ -14,8 +14,23 @@
         "Σχολάρι"
       ],
       "start_date": 1774313040000,
-      "end_date": 1774323840000,
-      "end_date_announced": 1774324800000,
+      "end_date": 1774331040000,
+      "end_date_announced": 1774332000000,
+      "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0205:24324": {
+      "incident_id": 24324,
+      "ne_id": "0205",
+      "nomos": "Πιερίας",
+      "areas": [
+        "Λιτόχωρο"
+      ],
+      "start_date": 1774322160000,
+      "end_date": 1774331160000,
+      "end_date_announced": 1774332000000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
@@ -34,13 +49,43 @@
         "Σχολάρι"
       ],
       "start_date": 1774313040000,
-      "end_date": 1774323840000,
-      "end_date_announced": 1774324800000,
+      "end_date": 1774331040000,
+      "end_date_announced": 1774332000000,
       "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0503:24326": {
+      "incident_id": 24326,
+      "ne_id": "0503",
+      "nomos": "ΝΕ 0503",
+      "areas": [
+        "Νοτίου Πηλίου"
+      ],
+      "start_date": 1774326300000,
+      "end_date": 1774333500000,
+      "end_date_announced": 1774333800000,
+      "creator": "A.Vergos",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "1:24326": {
+      "incident_id": 24326,
+      "ne_id": "1",
+      "nomos": "Μαγνησίας",
+      "areas": [
+        "Νοτίου Πηλίου"
+      ],
+      "start_date": 1774326300000,
+      "end_date": 1774333500000,
+      "end_date_announced": 1774333800000,
+      "creator": "A.Vergos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T02:51:13.146991+00:00"
+  "updated_at": "2026-03-24T05:00:07.820994+00:00"
 }
