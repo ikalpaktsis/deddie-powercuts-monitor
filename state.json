@@ -9,28 +9,13 @@
         "Σοφάδων"
       ],
       "start_date": 1774437180000,
-      "end_date": 1774440780000,
-      "end_date_announced": 1774441800000,
-      "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0803:24349": {
-      "incident_id": 24349,
-      "ne_id": "0803",
-      "nomos": "Ευρυτανίας",
-      "areas": [
-        "Αγράφων"
-      ],
-      "start_date": 1774425840000,
-      "end_date": 1774447440000,
+      "end_date": 1774447980000,
       "end_date_announced": 1774449000000,
-      "creator": "S.Barkas",
+      "creator": "m.betsos",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-25T12:06:28.347792+00:00"
+  "updated_at": "2026-03-25T13:51:08.018626+00:00"
 }
