@@ -9,44 +9,59 @@
         "Δρύμη"
       ],
       "start_date": 1774386240000,
-      "end_date": 1774398840000,
-      "end_date_announced": 1774400400000,
+      "end_date": 1774422240000,
+      "end_date_announced": 1774423800000,
       "creator": "A.Bellas",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24338": {
-      "incident_id": 24338,
+    "7:24342": {
+      "incident_id": 24342,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Ασπρόπυργος",
-        "Ελευσίνα"
+        "Άγιοι Ανάργυροι",
+        "Καματερό"
       ],
-      "start_date": 1774391640000,
-      "end_date": 1774398840000,
-      "end_date_announced": 1774400400000,
+      "start_date": 1774400220000,
+      "end_date": 1774407420000,
+      "end_date_announced": 1774407600000,
       "creator": "kpd",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     },
-    "7:24339": {
-      "incident_id": 24339,
+    "7:24343": {
+      "incident_id": 24343,
       "ne_id": "7",
       "nomos": "Αττικής",
       "areas": [
-        "Σούνιο"
+        "Ικόνιο"
       ],
-      "start_date": 1774394700000,
-      "end_date": 1774400100000,
-      "end_date_announced": 1774400400000,
+      "start_date": 1774401540000,
+      "end_date": 1774408740000,
+      "end_date_announced": 1774409400000,
+      "creator": "kpd",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24344": {
+      "incident_id": 24344,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Μάνδρα"
+      ],
+      "start_date": 1774404780000,
+      "end_date": 1774411980000,
+      "end_date_announced": 1774413000000,
       "creator": "kpd",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-24T23:57:03.439376+00:00"
+  "updated_at": "2026-03-25T02:55:37.011843+00:00"
 }
