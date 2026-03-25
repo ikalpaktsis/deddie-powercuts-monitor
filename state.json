@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0501:24350": {
-      "incident_id": 24350,
-      "ne_id": "0501",
-      "nomos": "Καρδίτσας",
-      "areas": [
-        "Σοφάδων"
-      ],
-      "start_date": 1774437180000,
-      "end_date": 1774447980000,
-      "end_date_announced": 1774449000000,
-      "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-25T13:51:08.018626+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-25T15:07:59.419800+00:00"
 }
