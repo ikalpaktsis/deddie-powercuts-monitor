@@ -1,36 +1,21 @@
 {
   "version": 2,
   "incidents": {
-    "0502:24355": {
-      "incident_id": 24355,
-      "ne_id": "0502",
-      "nomos": "Λάρισας",
+    "7:24356": {
+      "incident_id": 24356,
+      "ne_id": "7",
+      "nomos": "Αττικής",
       "areas": [
-        "Νίκαιας"
+        "Βύρωνας"
       ],
-      "start_date": 1774501920000,
-      "end_date": 1774509120000,
-      "end_date_announced": 1774510200000,
-      "creator": "m.betsos",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
-    "0703:24352": {
-      "incident_id": 24352,
-      "ne_id": "0703",
-      "nomos": "Ηλείας",
-      "areas": [
-        "Σκιλλούντος"
-      ],
-      "start_date": 1774461600000,
-      "end_date": 1774504800000,
-      "end_date_announced": 1774506600000,
-      "creator": "St.Panagopoulos",
+      "start_date": 1774504080000,
+      "end_date": 1774511280000,
+      "end_date_announced": 1774512000000,
+      "creator": "G.Neakis",
       "cause": "OUTAGE",
       "is_active": true,
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-26T05:50:44.522461+00:00"
+  "updated_at": "2026-03-26T07:20:01.304342+00:00"
 }
