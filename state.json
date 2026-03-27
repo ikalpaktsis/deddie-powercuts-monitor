@@ -1,6 +1,61 @@
 {
   "version": 2,
   "incidents": {
+    "0105:24367": {
+      "incident_id": 24367,
+      "ne_id": "0105",
+      "nomos": "Ξάνθης",
+      "areas": [
+        "ΒΙ.ΠΕ. Ξάνθης",
+        "Εύμοιρο",
+        "Μορσίνη",
+        "Χρύσα"
+      ],
+      "start_date": 1774623600000,
+      "end_date": 1774630800000,
+      "end_date_announced": 1774632600000,
+      "creator": "A.Bellas",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0403:24368": {
+      "incident_id": 24368,
+      "ne_id": "0403",
+      "nomos": "Ιωάννινων",
+      "areas": [
+        "Άνω Καλαμά",
+        "Άνω Πωγωνίου",
+        "Δελβινακίου",
+        "Καλπακίου",
+        "Λάβδανης",
+        "Πωγωνιανής"
+      ],
+      "start_date": 1774618200000,
+      "end_date": 1774629000000,
+      "end_date_announced": 1774630800000,
+      "creator": "M.Kalfountzou",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "0502:24369": {
+      "incident_id": 24369,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
+      "areas": [
+        "Ελασσόνας",
+        "Λιβαδιού",
+        "Ολύμπου"
+      ],
+      "start_date": 1774623900000,
+      "end_date": 1774631100000,
+      "end_date_announced": 1774632600000,
+      "creator": "s.moraitis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
     "7:24365": {
       "incident_id": 24365,
       "ne_id": "7",
@@ -34,5 +89,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-27T14:37:17.140701+00:00"
+  "updated_at": "2026-03-27T15:36:32.636129+00:00"
 }
