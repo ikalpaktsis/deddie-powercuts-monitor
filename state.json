@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-27T10:07:43.954502+00:00"
+  "incidents": {
+    "0401:24364": {
+      "incident_id": 24364,
+      "ne_id": "0401",
+      "nomos": "Άρτας",
+      "areas": [
+        "Τετραφυλίας"
+      ],
+      "start_date": 1774563300000,
+      "end_date": 1774649700000,
+      "end_date_announced": 1774650600000,
+      "creator": "X.Leivadiotis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-27T11:08:26.286942+00:00"
 }
