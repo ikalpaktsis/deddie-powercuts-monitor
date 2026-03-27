@@ -1,22 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0701:24362": {
-      "incident_id": 24362,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Ανακτορίου",
-        "Μεδεώνος"
-      ],
-      "start_date": 1774595700000,
-      "end_date": 1774602900000,
-      "end_date_announced": 1774603800000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0702:24360": {
       "incident_id": 24360,
       "ne_id": "0702",
@@ -33,5 +17,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-27T08:02:38.900025+00:00"
+  "updated_at": "2026-03-27T09:08:56.820811+00:00"
 }
