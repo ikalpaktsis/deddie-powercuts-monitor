@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0702:24360": {
-      "incident_id": 24360,
-      "ne_id": "0702",
-      "nomos": "Αχαΐας",
-      "areas": [
-        "Πατρέων"
-      ],
-      "start_date": 1774593300000,
-      "end_date": 1774604100000,
-      "end_date_announced": 1774605600000,
-      "creator": "X.Leivadiotis",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-27T09:08:56.820811+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-27T10:07:43.954502+00:00"
 }
