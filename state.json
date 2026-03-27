@@ -1,26 +1,6 @@
 {
   "version": 2,
   "incidents": {
-    "0403:24368": {
-      "incident_id": 24368,
-      "ne_id": "0403",
-      "nomos": "Ιωάννινων",
-      "areas": [
-        "Άνω Καλαμά",
-        "Άνω Πωγωνίου",
-        "Δελβινακίου",
-        "Καλπακίου",
-        "Λάβδανης",
-        "Πωγωνιανής"
-      ],
-      "start_date": 1774618200000,
-      "end_date": 1774647000000,
-      "end_date_announced": 1774648800000,
-      "creator": "M.Kalfountzou",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    },
     "0701:24372": {
       "incident_id": 24372,
       "ne_id": "0701",
@@ -37,5 +17,5 @@
       "is_scheduled": false
     }
   },
-  "updated_at": "2026-03-27T21:04:51.386922+00:00"
+  "updated_at": "2026-03-27T21:51:59.143682+00:00"
 }
