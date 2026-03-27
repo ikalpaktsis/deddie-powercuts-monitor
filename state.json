@@ -1,5 +1,38 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-27T13:38:12.565717+00:00"
+  "incidents": {
+    "7:24365": {
+      "incident_id": 24365,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Παπάγου",
+        "Χολαργός"
+      ],
+      "start_date": 1774620300000,
+      "end_date": 1774631100000,
+      "end_date_announced": 1774632600000,
+      "creator": "G.Neakis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    },
+    "7:24366": {
+      "incident_id": 24366,
+      "ne_id": "7",
+      "nomos": "Αττικής",
+      "areas": [
+        "Παπάγου",
+        "Χολαργός"
+      ],
+      "start_date": 1774620300000,
+      "end_date": 1774631100000,
+      "end_date_announced": 1774632600000,
+      "creator": "G.Neakis",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-27T14:37:17.140701+00:00"
 }
