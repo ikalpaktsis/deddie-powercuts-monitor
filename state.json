@@ -1,21 +1,5 @@
 {
   "version": 2,
-  "incidents": {
-    "0701:24372": {
-      "incident_id": 24372,
-      "ne_id": "0701",
-      "nomos": "Αιτωλοακαρνανίας",
-      "areas": [
-        "Ναυπάκτου"
-      ],
-      "start_date": 1774637700000,
-      "end_date": 1774680900000,
-      "end_date_announced": 1774681200000,
-      "creator": "M.Kalfountzou",
-      "cause": "OUTAGE",
-      "is_active": true,
-      "is_scheduled": false
-    }
-  },
-  "updated_at": "2026-03-28T06:06:20.869764+00:00"
+  "incidents": {},
+  "updated_at": "2026-03-28T07:15:55.653260+00:00"
 }
