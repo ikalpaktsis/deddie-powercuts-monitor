@@ -1,5 +1,22 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-28T19:00:56.128986+00:00"
+  "incidents": {
+    "0502:24373": {
+      "incident_id": 24373,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
+      "areas": [
+        "Ναρθακίου",
+        "Πολυδάμαντα"
+      ],
+      "start_date": 1774714260000,
+      "end_date": 1774728660000,
+      "end_date_announced": 1774729800000,
+      "creator": "d.chamchougias",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-28T19:46:22.314488+00:00"
 }
