@@ -1,5 +1,21 @@
 {
   "version": 2,
-  "incidents": {},
-  "updated_at": "2026-03-29T13:11:05.672648+00:00"
+  "incidents": {
+    "0502:24375": {
+      "incident_id": 24375,
+      "ne_id": "0502",
+      "nomos": "Λάρισας",
+      "areas": [
+        "Τεμπών"
+      ],
+      "start_date": 1774787400000,
+      "end_date": 1774794600000,
+      "end_date_announced": 1774796400000,
+      "creator": "d.chamchougias",
+      "cause": "OUTAGE",
+      "is_active": true,
+      "is_scheduled": false
+    }
+  },
+  "updated_at": "2026-03-29T14:00:04.544537+00:00"
 }
